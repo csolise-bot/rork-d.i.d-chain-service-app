@@ -7,7 +7,6 @@ import {
   TouchableOpacity,
   Animated,
   Linking,
-  Platform,
 } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { LinearGradient } from 'expo-linear-gradient';
@@ -270,7 +269,7 @@ export default function ChainFinderScreen() {
                 onPress={() => togglePicker('year')}
                 testID="year-selector"
               >
-                <Text style={[styles.selectorLabel, selectedYear && styles.selectorLabelFilled, responsive.isTablet && { fontSize: 16 }]}>
+                <Text style={[styles.selectorLabel, selectedYear != null && styles.selectorLabelFilled, responsive.isTablet && { fontSize: 16 }]}>
                   {selectedYear ? String(selectedYear) : 'Select Year'}
                 </Text>
                 {activePicker === 'year' ? (
@@ -381,7 +380,7 @@ export default function ChainFinderScreen() {
                 }}
                 testID="gearing-toggle"
               >
-                <Settings2 size={18} color={Colors.primary} />
+                <Settings2 size={18} color="#fff" />
                 <Text style={[styles.gearingToggleText, responsive.isTablet && { fontSize: 16 }]}>
                   {showGearingTool ? 'Hide Gearing Adjuster' : 'Adjust Gearing'}
                 </Text>
@@ -688,13 +687,13 @@ const styles = StyleSheet.create({
     gap: 8,
     paddingVertical: 14,
     borderRadius: 12,
-    backgroundColor: 'rgba(227,25,55,0.08)',
+    backgroundColor: 'rgba(227,25,55,0.85)',
     borderWidth: 1,
-    borderColor: 'rgba(227,25,55,0.2)',
+    borderColor: 'rgba(227,25,55,1)',
     marginBottom: 14,
   },
   gearingToggleText: {
-    color: Colors.primary,
+    color: '#fff',
     fontSize: 14,
     fontWeight: '600' as const,
   },
