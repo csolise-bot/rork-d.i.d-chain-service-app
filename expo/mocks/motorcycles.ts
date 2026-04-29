@@ -1,4 +1,4 @@
-import { MotorcycleSpec } from '@/constants/types';
+import { MotorcycleSpec, WheelRecommendation } from '@/constants/types';
 
 function yearRange(
   startYear: number,
@@ -24,6 +24,229 @@ function yearRange(
     specs.push(spec);
   }
   return specs;
+}
+
+type WheelApplication = {
+  make: string;
+  model: string;
+  startYear: number;
+  endYear: number;
+  recommendations: WheelRecommendation[];
+};
+
+const currentApplicationYear = 2026;
+
+const normalizeModelName = (model: string): string => model.toUpperCase().replace(/[^A-Z0-9]/g, '');
+
+const isModelMatch = (bikeModel: string, applicationModel: string): boolean => {
+  const normalizedBikeModel = normalizeModelName(bikeModel);
+  const normalizedApplicationModel = normalizeModelName(applicationModel.replace(/ Models?/gi, ''));
+
+  if (applicationModel.includes('/')) {
+    const prefixMatch = applicationModel.match(/^([A-Z]+)\s+/i);
+    const prefix = prefixMatch ? normalizeModelName(prefixMatch[1]) : '';
+    return applicationModel
+      .replace(/ Models?/gi, '')
+      .split('/')
+      .map(part => `${prefix}${normalizeModelName(part)}`)
+      .some(model => model === normalizedBikeModel);
+  }
+
+  if (/\bModels?\b/i.test(applicationModel)) {
+    return normalizedBikeModel.includes(normalizedApplicationModel);
+  }
+
+  return normalizedBikeModel === normalizedApplicationModel;
+};
+
+const wheelApplications: WheelApplication[] = [
+  { make: 'Honda', model: 'CR125R', startYear: 2002, endYear: 2007, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: '19X185VB01H' }, { label: 'Original Silver', code: '19X185VS01H' }, { label: 'ST-X Black', code: '19X185STB01H' }] },
+  ] },
+  { make: 'Honda', model: 'CR250R', startYear: 2002, endYear: 2007, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: '19X215VB01H' }, { label: 'Original Silver', code: '19X215VS01H' }, { label: 'ST-X Black', code: '19X215STB01H' }] },
+  ] },
+  { make: 'Honda', model: 'CRF250R', startYear: 2004, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: '19X185VB01H' }, { label: 'Original Silver', code: '19X185VS01H' }, { label: 'ST-X Black', code: '19X185STB01H' }] },
+    { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
+    { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
+  ] },
+  { make: 'Honda', model: 'CRF250X', startYear: 2004, endYear: 2017, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: '18X215VB01H' }, { label: 'Original Silver', code: '18X215VS01H' }, { label: 'ST-X Black', code: '18X215STB01H' }] },
+  ] },
+  { make: 'Honda', model: 'CRF450R', startYear: 2004, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: '19X215VB01H' }, { label: 'Original Silver', code: '19X215VS01H' }, { label: 'ST-X Black', code: '19X215STB01H' }] },
+    { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
+    { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
+  ] },
+  { make: 'Honda', model: 'CRF450X', startYear: 2005, endYear: 2017, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: '18X215VB01H' }, { label: 'Original Silver', code: '18X215VS01H' }, { label: 'ST-X Black', code: '18X215STB01H' }] },
+  ] },
+  { make: 'Honda', model: 'CR500R', startYear: 2002, endYear: 2007, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: '19X215VB01H' }, { label: 'Original Silver', code: '19X215VS01H' }, { label: 'ST-X Black', code: '19X215STB01H' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ80/85', startYear: 1974, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '19x1.40', productCodes: [{ label: 'Original Black', code: '19X140VB01Y' }, { label: 'Original Silver', code: '19X140VS01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '16x1.85', productCodes: [{ label: 'Original Black', code: '16X185VB01Y' }, { label: 'Original Silver', code: '16X185VS01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ125', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ250', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ250F', startYear: 2001, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01Y' }] },
+    { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
+    { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
+  ] },
+  { make: 'Yamaha', model: 'WR250F', startYear: 2004, endYear: 2025, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ400/426F', startYear: 1998, endYear: 2002, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'WR400/426F', startYear: 1998, endYear: 2002, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ450F', startYear: 2003, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01Y' }] },
+    { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
+    { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
+  ] },
+  { make: 'Yamaha', model: 'WR450F', startYear: 2003, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: '18X215VB01Y' }, { label: 'Original Silver', code: '18X215VS01Y' }, { label: 'ST-X Black', code: '18X215STB01Y' }] },
+  ] },
+  { make: 'Suzuki', model: 'RM125', startYear: 1996, endYear: 2008, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01S' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01S' }] },
+  ] },
+  { make: 'Suzuki', model: 'RM250', startYear: 1996, endYear: 2008, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01S' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01S' }] },
+  ] },
+  { make: 'Suzuki', model: 'RM-Z250', startYear: 2004, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01S' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01S' }] },
+  ] },
+  { make: 'Suzuki', model: 'RM-Z450', startYear: 2005, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01S' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01S' }] },
+  ] },
+  { make: 'Suzuki', model: 'RM-X450Z', startYear: 2010, endYear: 2011, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01S' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }] },
+  ] },
+  { make: 'Suzuki', model: 'DR-Z250', startYear: 2001, endYear: 2007, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01S' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KX125', startYear: 2000, endYear: 2008, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01K' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01K' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KX250', startYear: 1997, endYear: 2008, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01K' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01K' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KX250F', startYear: 2004, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01K' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01K' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KLX250S', startYear: 1998, endYear: 2018, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01K' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: '18X215VB01K' }, { label: 'Original Silver', code: '18X215VS01K' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KX450F', startYear: 2006, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01K' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01K' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KLX450R', startYear: 2008, endYear: 2014, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01K' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }] },
+  ] },
+  { make: 'Kawasaki', model: 'KX500', startYear: 1995, endYear: 2004, recommendations: [
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01K' }] },
+  ] },
+  { make: 'KTM', model: 'SX Models', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01T' }] },
+  ] },
+  { make: 'KTM', model: 'SX-F Models', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01T' }] },
+  ] },
+  { make: 'KTM', model: 'EXC Models', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'KTM', model: 'XC Models', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'KTM', model: 'XC-F Models', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'KTM', model: 'XC-W Models', startYear: 1996, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'KTM', model: 'SX-F Models', startYear: 2019, endYear: 2022, recommendations: [
+    { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-KTM22' }], notes: '25mm Collar' },
+    { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-KTM22' }], notes: '25mm Collar' },
+  ] },
+  { make: 'KTM', model: 'SX-F Models', startYear: 2023, endYear: currentApplicationYear, recommendations: [
+    { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-KTM23' }], notes: '22mm Collar' },
+    { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-KTM23' }], notes: '22mm Collar' },
+  ] },
+  { make: 'Husqvarna', model: 'TC 125/250', startYear: 2014, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01T' }] },
+  ] },
+  { make: 'Husqvarna', model: 'FC 250/350/450', startYear: 2014, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01T' }] },
+  ] },
+  { make: 'Husqvarna', model: 'TE 125/250/300', startYear: 2014, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'Husqvarna', model: 'FE 250/350/350S', startYear: 2014, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'Husqvarna', model: 'FE 450', startYear: 2014, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+  { make: 'Husqvarna', model: 'FE 501/501S', startYear: 2014, endYear: 2026, recommendations: [
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01T' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '18x2.15', productCodes: [{ label: 'Original Black', code: 'U18X215VBK' }, { label: 'Original Silver', code: 'U18X215VSL' }, { label: 'ST-X Black', code: '18X215STB01T' }] },
+  ] },
+];
+
+export function getWheelRecommendations(year: number, make: string, model: string): WheelRecommendation[] {
+  const recommendations = wheelApplications
+    .filter(application => application.make === make && year >= application.startYear && year <= application.endYear && isModelMatch(model, application.model))
+    .flatMap(application => application.recommendations);
+
+  return recommendations.filter((recommendation, index, list) => {
+    const key = `${recommendation.type}-${recommendation.position}-${recommendation.rimSize ?? ''}-${recommendation.productCodes.map(product => product.code).join('|')}-${recommendation.notes ?? ''}`;
+    return list.findIndex(item => `${item.type}-${item.position}-${item.rimSize ?? ''}-${item.productCodes.map(product => product.code).join('|')}-${item.notes ?? ''}` === key) === index;
+  });
 }
 
 export const motorcycleDatabase: MotorcycleSpec[] = [

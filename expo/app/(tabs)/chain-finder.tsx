@@ -28,6 +28,7 @@ import {
   getModelsForMake,
   getYearsForMakeModel,
   getSpec,
+  getWheelRecommendations,
   calculateGearingRatio,
   estimateChainLength,
 } from '@/mocks/motorcycles';
@@ -145,6 +146,11 @@ export default function ChainFinderScreen() {
       setAdjustedRear(prev => Math.max(30, Math.min(60, prev + delta)));
     }
   }, []);
+
+  const wheelRecommendations = useMemo(
+    () => activeSpec ? getWheelRecommendations(activeSpec.year, activeSpec.make, activeSpec.model) : [],
+    [activeSpec]
+  );
 
   const isGearingModified = activeSpec
     ? adjustedFront !== activeSpec.frontSprocket || adjustedRear !== activeSpec.rearSprocket
@@ -495,6 +501,46 @@ export default function ChainFinderScreen() {
                     <ExternalLink size={14} color={Colors.textSecondary} />
                   </View>
                 </TouchableOpacity>
+              )}
+
+              {wheelRecommendations.length > 0 && (
+                <View style={[styles.wheelSection, { padding: responsive.spacing.cardPadding }]} testID="wheel-recommendations">
+                  <View style={styles.wheelSectionHeader}>
+                    <Text style={[styles.wheelSectionEyebrow, responsive.isTablet && { fontSize: 11 }]}>WHEEL & RIM APPLICATIONS</Text>
+                    <Text style={[styles.wheelSectionTitle, responsive.isTablet && { fontSize: 22 }]}>DirtStar Rim / Ace Wheelset Recommendations</Text>
+                  </View>
+
+                  {wheelRecommendations.map((recommendation, recommendationIndex) => (
+                    <View
+                      key={`${recommendation.type}-${recommendation.position}-${recommendation.rimSize ?? 'wheelset'}-${recommendationIndex}`}
+                      style={styles.wheelRecommendationCard}
+                    >
+                      <View style={styles.wheelRecommendationTopRow}>
+                        <View style={styles.wheelTypePill}>
+                          <Text style={styles.wheelTypePillText}>{recommendation.type}</Text>
+                        </View>
+                        <Text style={styles.wheelPosition}>{recommendation.position}</Text>
+                      </View>
+
+                      {recommendation.rimSize && (
+                        <Text style={[styles.wheelRimSize, responsive.isTablet && { fontSize: 17 }]}>Rim Size: {recommendation.rimSize}</Text>
+                      )}
+
+                      <View style={styles.wheelCodeGrid}>
+                        {recommendation.productCodes.map(product => (
+                          <View key={`${recommendation.position}-${product.label}-${product.code}`} style={styles.wheelCodePill}>
+                            <Text style={styles.wheelCodeLabel}>{product.label}</Text>
+                            <Text style={[styles.wheelCodeValue, responsive.isTablet && { fontSize: 15 }]}>{product.code}</Text>
+                          </View>
+                        ))}
+                      </View>
+
+                      {recommendation.notes && (
+                        <Text style={styles.wheelNotes}>{recommendation.notes}</Text>
+                      )}
+                    </View>
+                  ))}
+                </View>
               )}
             </Animated.View>
           )}
@@ -855,5 +901,97 @@ const styles = StyleSheet.create({
     color: Colors.textSecondary,
     fontSize: 13,
     fontWeight: '600' as const,
+  },
+  wheelSection: {
+    backgroundColor: '#121212',
+    borderRadius: 18,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: 'rgba(212,168,67,0.35)',
+    marginTop: 14,
+    gap: 12,
+  },
+  wheelSectionHeader: {
+    gap: 5,
+    marginBottom: 2,
+  },
+  wheelSectionEyebrow: {
+    color: Colors.chainGold,
+    fontSize: 10,
+    fontWeight: '900' as const,
+    letterSpacing: 1.2,
+  },
+  wheelSectionTitle: {
+    color: Colors.text,
+    fontSize: 18,
+    fontWeight: '800' as const,
+    lineHeight: 24,
+  },
+  wheelRecommendationCard: {
+    backgroundColor: Colors.surface,
+    borderRadius: 14,
+    padding: 14,
+    borderWidth: 1,
+    borderColor: Colors.border,
+    gap: 10,
+  },
+  wheelRecommendationTopRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    gap: 10,
+  },
+  wheelTypePill: {
+    backgroundColor: 'rgba(227,25,55,0.13)',
+    paddingHorizontal: 10,
+    paddingVertical: 5,
+    borderRadius: 999,
+  },
+  wheelTypePillText: {
+    color: Colors.primaryLight,
+    fontSize: 11,
+    fontWeight: '800' as const,
+  },
+  wheelPosition: {
+    color: Colors.text,
+    fontSize: 13,
+    fontWeight: '800' as const,
+  },
+  wheelRimSize: {
+    color: Colors.textSecondary,
+    fontSize: 15,
+    fontWeight: '700' as const,
+  },
+  wheelCodeGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 8,
+  },
+  wheelCodePill: {
+    backgroundColor: Colors.surfaceHighlight,
+    borderRadius: 10,
+    paddingHorizontal: 10,
+    paddingVertical: 8,
+    borderWidth: 1,
+    borderColor: Colors.borderLight,
+    minWidth: '45%' as unknown as number,
+    flex: 1,
+  },
+  wheelCodeLabel: {
+    color: Colors.textMuted,
+    fontSize: 10,
+    fontWeight: '700' as const,
+    marginBottom: 3,
+    textTransform: 'uppercase' as const,
+  },
+  wheelCodeValue: {
+    color: Colors.text,
+    fontSize: 13,
+    fontWeight: '900' as const,
+  },
+  wheelNotes: {
+    color: Colors.warning,
+    fontSize: 12,
+    fontWeight: '700' as const,
   },
 });

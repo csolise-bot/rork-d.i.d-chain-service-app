@@ -23,6 +23,14 @@ export interface GearingResult {
   ratioChange: number;
 }
 
+export interface WheelRecommendation {
+  type: 'DirtStar Rim' | 'Ace Wheelset';
+  position: 'Front' | 'Rear';
+  rimSize?: string;
+  productCodes: { label: string; code: string }[];
+  notes?: string;
+}
+
 export interface WearResult {
   measuredLength: number;
   nominalLength: number;
