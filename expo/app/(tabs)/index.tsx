@@ -118,7 +118,7 @@ export default function HomeScreen() {
                       <Search size={responsive.isTablet ? 28 : 24} color={Colors.white} />
                     </View>
                     <View style={styles.toolTextWrap}>
-                      <Text style={[styles.toolCardTitle, responsive.isTablet && { fontSize: 19 }]}>Chain Finder</Text>
+                      <Text style={[styles.toolCardTitle, responsive.isTablet && { fontSize: 19 }]}>Parts Finder</Text>
                       <Text style={[styles.toolCardDesc, { fontSize: responsive.fontSize.small }]}>
                         Select your bike to get exact chain, sprocket specs, and gearing ratios. Adjust gearing with auto chain length recalculation.
                       </Text>

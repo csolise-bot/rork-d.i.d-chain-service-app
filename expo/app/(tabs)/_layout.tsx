@@ -36,7 +36,7 @@ export default function TabLayout() {
       <Tabs.Screen
         name="chain-finder"
         options={{
-          title: 'Chain Finder',
+          title: 'Parts Finder',
           tabBarIcon: ({ color, size }) => <Search size={isTablet ? size + 4 : size} color={color} />,
         }}
       />

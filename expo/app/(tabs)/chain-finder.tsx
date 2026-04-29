@@ -188,14 +188,14 @@ export default function ChainFinderScreen() {
           responsive.isTablet && { maxWidth: responsive.contentMaxWidth, width: '100%' as unknown as number },
         ]}>
           <View style={styles.headerRow}>
-            <Text style={[styles.screenTitle, { fontSize: responsive.fontSize.screenTitle }]}>Chain Finder</Text>
+            <Text style={[styles.screenTitle, { fontSize: responsive.fontSize.screenTitle }]}>Parts Finder</Text>
             {activeSpec && (
               <TouchableOpacity onPress={handleReset} style={[styles.resetBtn, responsive.isTablet && { width: 42, height: 42, borderRadius: 21 }]} testID="reset-button">
                 <RotateCcw size={responsive.isTablet ? 18 : 16} color={Colors.textSecondary} />
               </TouchableOpacity>
             )}
           </View>
-          <Text style={[styles.screenSubtitle, { fontSize: responsive.isTablet ? 16 : 14 }]}>Select your motorcycle to find exact specs</Text>
+          <Text style={[styles.screenSubtitle, { fontSize: responsive.isTablet ? 16 : 14 }]}>Select your bike model to get OEM chain and sprocket information, adjust your gearing, and see the recommended D.I.D products available.</Text>
 
           <View style={styles.selectorsContainer}>
             <TouchableOpacity
