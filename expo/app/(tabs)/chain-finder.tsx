@@ -543,10 +543,10 @@ export default function ChainFinderScreen() {
                                 activeOpacity={0.8}
                                 testID={`wheel-code-${product.code}`}
                               >
-                                <Text style={styles.wheelCodeLabel}>{product.label}</Text>
+                                <Text style={[styles.wheelCodeLabel, styles.wheelCodeLabelLink]}>{product.label}</Text>
                                 <View style={styles.wheelCodeValueRow}>
                                   <Text style={[styles.wheelCodeValue, styles.wheelCodeValueLink, responsive.isTablet && { fontSize: 15 }]}>{product.code}</Text>
-                                  <ExternalLink size={11} color={Colors.primaryLight} />
+                                  <ExternalLink size={11} color={'#000000'} />
                                 </View>
                               </TouchableOpacity>
                             );
@@ -1003,8 +1003,8 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   wheelCodePillLink: {
-    borderColor: 'rgba(227,25,55,0.45)',
-    backgroundColor: 'rgba(227,25,55,0.08)',
+    borderColor: '#FFFFFF',
+    backgroundColor: '#FFFFFF',
   },
   wheelCodeValueRow: {
     flexDirection: 'row',
@@ -1012,7 +1012,10 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   wheelCodeValueLink: {
-    color: Colors.primaryLight,
+    color: '#000000',
+  },
+  wheelCodeLabelLink: {
+    color: '#555555',
   },
   wheelCodeLabel: {
     color: Colors.textMuted,
