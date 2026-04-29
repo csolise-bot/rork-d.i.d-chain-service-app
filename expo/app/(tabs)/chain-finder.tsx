@@ -23,6 +23,7 @@ import {
 import * as Haptics from 'expo-haptics';
 import Colors from '@/constants/colors';
 import { MotorcycleSpec, GearingResult } from '@/constants/types';
+import { getProductLink } from '@/constants/productLinks';
 import {
   getUniqueMakes,
   getModelsForMake,
@@ -527,12 +528,36 @@ export default function ChainFinderScreen() {
                       )}
 
                       <View style={styles.wheelCodeGrid}>
-                        {recommendation.productCodes.map(product => (
-                          <View key={`${recommendation.position}-${product.label}-${product.code}`} style={styles.wheelCodePill}>
-                            <Text style={styles.wheelCodeLabel}>{product.label}</Text>
-                            <Text style={[styles.wheelCodeValue, responsive.isTablet && { fontSize: 15 }]}>{product.code}</Text>
-                          </View>
-                        ))}
+                        {recommendation.productCodes.map(product => {
+                          const productUrl = getProductLink(product.code);
+                          const pillKey = `${recommendation.position}-${product.label}-${product.code}`;
+                          if (productUrl) {
+                            return (
+                              <TouchableOpacity
+                                key={pillKey}
+                                style={[styles.wheelCodePill, styles.wheelCodePillLink]}
+                                onPress={() => {
+                                  Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Light);
+                                  Linking.openURL(productUrl);
+                                }}
+                                activeOpacity={0.8}
+                                testID={`wheel-code-${product.code}`}
+                              >
+                                <Text style={styles.wheelCodeLabel}>{product.label}</Text>
+                                <View style={styles.wheelCodeValueRow}>
+                                  <Text style={[styles.wheelCodeValue, styles.wheelCodeValueLink, responsive.isTablet && { fontSize: 15 }]}>{product.code}</Text>
+                                  <ExternalLink size={11} color={Colors.primaryLight} />
+                                </View>
+                              </TouchableOpacity>
+                            );
+                          }
+                          return (
+                            <View key={pillKey} style={styles.wheelCodePill}>
+                              <Text style={styles.wheelCodeLabel}>{product.label}</Text>
+                              <Text style={[styles.wheelCodeValue, responsive.isTablet && { fontSize: 15 }]}>{product.code}</Text>
+                            </View>
+                          );
+                        })}
                       </View>
 
                       {recommendation.notes && (
@@ -976,6 +1001,18 @@ const styles = StyleSheet.create({
     borderColor: Colors.borderLight,
     minWidth: '45%' as unknown as number,
     flex: 1,
+  },
+  wheelCodePillLink: {
+    borderColor: 'rgba(227,25,55,0.45)',
+    backgroundColor: 'rgba(227,25,55,0.08)',
+  },
+  wheelCodeValueRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 5,
+  },
+  wheelCodeValueLink: {
+    color: Colors.primaryLight,
   },
   wheelCodeLabel: {
     color: Colors.textMuted,

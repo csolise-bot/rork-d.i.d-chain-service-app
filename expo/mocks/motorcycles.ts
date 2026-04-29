@@ -71,6 +71,8 @@ const wheelApplications: WheelApplication[] = [
   { make: 'Honda', model: 'CRF250R', startYear: 2004, endYear: 2026, recommendations: [
     { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
     { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: '19X185VB01H' }, { label: 'Original Silver', code: '19X185VS01H' }, { label: 'ST-X Black', code: '19X185STB01H' }] },
+  ] },
+  { make: 'Honda', model: 'CRF250R', startYear: 2014, endYear: currentApplicationYear, recommendations: [
     { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
     { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
   ] },
@@ -81,6 +83,8 @@ const wheelApplications: WheelApplication[] = [
   { make: 'Honda', model: 'CRF450R', startYear: 2004, endYear: 2026, recommendations: [
     { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01H' }] },
     { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: '19X215VB01H' }, { label: 'Original Silver', code: '19X215VS01H' }, { label: 'ST-X Black', code: '19X215STB01H' }] },
+  ] },
+  { make: 'Honda', model: 'CRF450R', startYear: 2013, endYear: currentApplicationYear, recommendations: [
     { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
     { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-HONDA' }] },
   ] },
@@ -93,8 +97,8 @@ const wheelApplications: WheelApplication[] = [
     { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: '19X215VB01H' }, { label: 'Original Silver', code: '19X215VS01H' }, { label: 'ST-X Black', code: '19X215STB01H' }] },
   ] },
   { make: 'Yamaha', model: 'YZ80/85', startYear: 1974, endYear: 2026, recommendations: [
-    { type: 'DirtStar Rim', position: 'Front', rimSize: '19x1.40', productCodes: [{ label: 'Original Black', code: '19X140VB01Y' }, { label: 'Original Silver', code: '19X140VS01Y' }] },
-    { type: 'DirtStar Rim', position: 'Rear', rimSize: '16x1.85', productCodes: [{ label: 'Original Black', code: '16X185VB01Y' }, { label: 'Original Silver', code: '16X185VS01Y' }] },
+    { type: 'DirtStar Rim', position: 'Front', rimSize: '19x1.40', productCodes: [{ label: 'Original Black', code: '19X140VB01Y' }, { label: 'Original Silver', code: '19X140VS01Y' }, { label: 'ST-X Black', code: '19X140STB01Y' }] },
+    { type: 'DirtStar Rim', position: 'Rear', rimSize: '16x1.85', productCodes: [{ label: 'Original Black', code: '16X185VB01Y' }, { label: 'Original Silver', code: '16X185VS01Y' }, { label: 'ST-X Black', code: '16X185STB01Y' }] },
   ] },
   { make: 'Yamaha', model: 'YZ125', startYear: 1996, endYear: 2026, recommendations: [
     { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
@@ -107,6 +111,8 @@ const wheelApplications: WheelApplication[] = [
   { make: 'Yamaha', model: 'YZ250F', startYear: 2001, endYear: 2026, recommendations: [
     { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
     { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x1.85', productCodes: [{ label: 'Original Black', code: 'U19X185VBK' }, { label: 'Original Silver', code: 'U19X185VSL' }, { label: 'ST-X Black', code: '19X185STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ250F', startYear: 2022, endYear: currentApplicationYear, recommendations: [
     { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
     { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
   ] },
@@ -123,6 +129,8 @@ const wheelApplications: WheelApplication[] = [
   { make: 'Yamaha', model: 'YZ450F', startYear: 2003, endYear: 2026, recommendations: [
     { type: 'DirtStar Rim', position: 'Front', rimSize: '21x1.60', productCodes: [{ label: 'Original Black', code: 'U21X160VBK' }, { label: 'Original Silver', code: 'U21X160VSL' }, { label: 'ST-X Black', code: '21X160STB01Y' }] },
     { type: 'DirtStar Rim', position: 'Rear', rimSize: '19x2.15', productCodes: [{ label: 'Original Black', code: 'U19X215VBK' }, { label: 'Original Silver', code: 'U19X215VSL' }, { label: 'ST-X Black', code: '19X215STB01Y' }] },
+  ] },
+  { make: 'Yamaha', model: 'YZ450F', startYear: 2021, endYear: currentApplicationYear, recommendations: [
     { type: 'Ace Wheelset', position: 'Front', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
     { type: 'Ace Wheelset', position: 'Rear', productCodes: [{ label: 'Wheelset', code: 'ACESET-YAMAHA' }] },
   ] },
