@@ -460,13 +460,13 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2020, 2025, 'Honda', 'CBR1000RR-R', 16, 40, '525', 118, 'DID 525ZVMX', 'https://www.didchain.com/products/525zvm-x2'),
 
   // Honda CBR650R
-  ...yearRange(2019, 2025, 'Honda', 'CBR650R', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
+  ...yearRange(2019, 2025, 'Honda', 'CBR650R', 15, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
 
   // Honda CBR650F
   ...yearRange(2014, 2018, 'Honda', 'CBR650F', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
 
   // Honda CB650R
-  ...yearRange(2019, 2025, 'Honda', 'CB650R', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
+  ...yearRange(2019, 2025, 'Honda', 'CB650R', 15, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
 
   // Honda CB650F
   ...yearRange(2014, 2018, 'Honda', 'CB650F', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
@@ -499,13 +499,13 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2013, 2021, 'Honda', 'CB1100', 18, 39, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVMX', 'https://www.didchain.com/products/530zvm-x2'),
 
   // Honda Rebel 500
-  ...yearRange(2017, 2025, 'Honda', 'Rebel 500', 15, 36, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  ...yearRange(2017, 2025, 'Honda', 'Rebel 500', 15, 40, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
   // Honda Rebel 1100
-  ...yearRange(2021, 2025, 'Honda', 'Rebel 1100', 16, 38, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x'),
+  ...yearRange(2021, 2025, 'Honda', 'Rebel 1100', 16, 42, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVMX', 'https://www.didchain.com/products/525zvm-x2'),
 
   // Honda Rebel 300
-  ...yearRange(2017, 2025, 'Honda', 'Rebel 300', 14, 36, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  ...yearRange(2017, 2025, 'Honda', 'Rebel 300', 14, 36, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
   // Honda Africa Twin CRF1100L
   ...yearRange(2020, 2025, 'Honda', 'Africa Twin CRF1100L', 16, 42, '525', 124, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVMX', 'https://www.didchain.com/products/525zvm-x2'),
@@ -546,11 +546,20 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Honda CRF450RWE
   ...yearRange(2019, 2025, 'Honda', 'CRF450RWE', 13, 49, '520', 114, 'DID 520ERT3', 'https://www.didchain.com/products/520ert3', 'DID 520DZ2', 'https://www.didchain.com/products/520dz2'),
 
-  // Honda Hornet 750
-  ...yearRange(2023, 2025, 'Honda', 'Hornet 750', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVMX', 'https://www.didchain.com/products/525zvm-x2'),
+  // Honda Hornet 750 (CB750 Hornet)
+  ...yearRange(2023, 2026, 'Honda', 'Hornet 750', 16, 45, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
+
+  // Honda Hornet CB1000
+  ...yearRange(2025, 2026, 'Honda', 'Hornet 1000', 15, 45, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVMX', 'https://www.didchain.com/products/525zvm-x2'),
+
+  // Honda NX500
+  ...yearRange(2024, 2026, 'Honda', 'NX500', 15, 41, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+
+  // Honda CL500 / SCL500 Scrambler
+  ...yearRange(2023, 2026, 'Honda', 'CL500', 15, 41, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
   // Honda Transalp 750
-  ...yearRange(2023, 2025, 'Honda', 'Transalp 750', 16, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVMX', 'https://www.didchain.com/products/525zvm-x2'),
+  ...yearRange(2023, 2026, 'Honda', 'Transalp 750', 16, 45, '520', 126, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
 
   // ============================================================
   // KAWASAKI
