@@ -30,6 +30,7 @@ import {
   getYearsForMakeModel,
   getSpec,
   getWheelRecommendations,
+  getStreetChainRecommendations,
   calculateGearingRatio,
   estimateChainLength,
 } from '@/mocks/motorcycles';
@@ -152,6 +153,19 @@ export default function ChainFinderScreen() {
     () => activeSpec ? getWheelRecommendations(activeSpec.year, activeSpec.make, activeSpec.model) : [],
     [activeSpec]
   );
+
+  const dynamicChainRecs = useMemo(
+    () => {
+      if (activeSpec?.cc == null) return null;
+      return getStreetChainRecommendations(activeSpec.cc, activeSpec.chainSize);
+    },
+    [activeSpec]
+  );
+
+  const displayChain = dynamicChainRecs?.recommendedChain ?? activeSpec?.recommendedChain;
+  const displayChainUrl = dynamicChainRecs?.recommendedChainUrl ?? activeSpec?.recommendedChainUrl;
+  const displaySecondaryChain = dynamicChainRecs?.secondaryChain ?? activeSpec?.secondaryChain;
+  const displaySecondaryChainUrl = dynamicChainRecs?.secondaryChainUrl ?? activeSpec?.secondaryChainUrl;
 
   const isGearingModified = activeSpec
     ? adjustedFront !== activeSpec.frontSprocket || adjustedRear !== activeSpec.rearSprocket
@@ -472,31 +486,31 @@ export default function ChainFinderScreen() {
 
               <TouchableOpacity
                 style={[styles.recommendedCard, { padding: responsive.spacing.cardPadding }]}
-                onPress={() => Linking.openURL(activeSpec.recommendedChainUrl)}
+                onPress={() => Linking.openURL(displayChainUrl!)}
                 activeOpacity={0.85}
                 testID="recommended-chain"
               >
                 <View style={styles.recommendedBadge}>
                   <Text style={[styles.recommendedBadgeText, responsive.isTablet && { fontSize: 11 }]}>TOP RECOMMENDATION</Text>
                 </View>
-                <Text style={[styles.recommendedChain, responsive.isTablet && { fontSize: 24 }]}>{activeSpec.recommendedChain}</Text>
+                <Text style={[styles.recommendedChain, responsive.isTablet && { fontSize: 24 }]}>{displayChain}</Text>
                 <View style={styles.recommendedLinkRow}>
                   <Text style={[styles.recommendedLinkText, responsive.isTablet && { fontSize: 15 }]}>View on didchain.com</Text>
                   <ExternalLink size={14} color={Colors.primary} />
                 </View>
               </TouchableOpacity>
 
-              {activeSpec.secondaryChain && activeSpec.secondaryChainUrl && (
+              {displaySecondaryChain && displaySecondaryChainUrl && (
                 <TouchableOpacity
                   style={[styles.secondaryCard, { padding: responsive.spacing.cardPadding }]}
-                  onPress={() => Linking.openURL(activeSpec.secondaryChainUrl!)}
+                  onPress={() => Linking.openURL(displaySecondaryChainUrl!)}
                   activeOpacity={0.85}
                   testID="secondary-chain"
                 >
                   <View style={styles.secondaryBadge}>
                     <Text style={[styles.secondaryBadgeText, responsive.isTablet && { fontSize: 11 }]}>ALSO RECOMMENDED</Text>
                   </View>
-                  <Text style={[styles.secondaryChain, responsive.isTablet && { fontSize: 22 }]}>{activeSpec.secondaryChain}</Text>
+                  <Text style={[styles.secondaryChain, responsive.isTablet && { fontSize: 22 }]}>{displaySecondaryChain}</Text>
                   <View style={styles.recommendedLinkRow}>
                     <Text style={[styles.secondaryLinkText, responsive.isTablet && { fontSize: 15 }]}>View on didchain.com</Text>
                     <ExternalLink size={14} color={Colors.textSecondary} />

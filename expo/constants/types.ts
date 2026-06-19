@@ -2,6 +2,7 @@ export interface MotorcycleSpec {
   year: number;
   make: string;
   model: string;
+  cc?: number;
   frontSprocket: number;
   rearSprocket: number;
   chainSize: string;
