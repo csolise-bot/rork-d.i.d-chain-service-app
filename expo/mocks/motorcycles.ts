@@ -1238,68 +1238,114 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2023, 2025, 'CFMoto', '300CL-X', 14, 38, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 292),
 
   // ============================================================
-  // DUCATI
+  // DUCATI — Specs verified against Sprocket Center (sprocketcenter.com)
   // ============================================================
 
-  // Ducati Panigale 899 (898cc)
-  ...yearRange(2014, 2015, 'Ducati', 'Panigale 899', 15, 44, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 898),
+  // Ducati Panigale 899 (898cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2013, 2016, 'Ducati', 'Panigale 899', 15, 44, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 898),
 
-  // Ducati Panigale 959 (955cc)
+  // Ducati Panigale 959 (955cc) — 520, 850+ → 520ZVM-X only
   ...yearRange(2016, 2019, 'Ducati', 'Panigale 959', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
 
-  // Ducati Panigale 1199 (1199cc)
-  ...yearRange(2012, 2014, 'Ducati', 'Panigale 1199', 15, 39, '525', 104, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1199),
+  // Ducati Panigale 1199 (1199cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2012, 2015, 'Ducati', 'Panigale 1199', 15, 39, '525', 104, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1199),
 
-  // Ducati Panigale 1299 (1285cc)
-  ...yearRange(2015, 2018, 'Ducati', 'Panigale 1299', 15, 39, '525', 104, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1285),
+  // Ducati Panigale 1299 (1285cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2015, 2017, 'Ducati', 'Panigale 1299', 15, 39, '525', 104, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1285),
 
-  // Ducati Panigale V2 (955cc)
-  ...yearRange(2020, 2025, 'Ducati', 'Panigale V2', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
+  // Ducati Panigale V2 (955cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2020, 2024, 'Ducati', 'Panigale V2', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
 
-  // Ducati Panigale V4 (1103cc)
-  ...yearRange(2018, 2025, 'Ducati', 'Panigale V4', 16, 41, '525', 114, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1103),
+  // Ducati Panigale V2 890 (890cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2025, 2026, 'Ducati', 'Panigale V2 890', 15, 42, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 890),
 
-  // Ducati Streetfighter V4 (1103cc)
-  ...yearRange(2020, 2025, 'Ducati', 'Streetfighter V4', 15, 42, '525', 116, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1103),
+  // Ducati Panigale V4 (1103cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2018, 2024, 'Ducati', 'Panigale V4', 16, 41, '525', 114, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1103),
 
-  // Ducati Streetfighter V2 (955cc)
-  ...yearRange(2022, 2025, 'Ducati', 'Streetfighter V2', 15, 45, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
+  // Ducati Panigale V4 2025+ (1103cc) — stock switched to 520, 850+ → 520ZVM-X only
+  ...yearRange(2025, 2026, 'Ducati', 'Panigale V4 2025', 16, 41, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
 
-  // Ducati Monster 821 (821cc)
-  ...yearRange(2014, 2020, 'Ducati', 'Monster 821', 15, 46, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 821),
+  // Ducati Panigale V4R (998cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2019, 2024, 'Ducati', 'Panigale V4R', 15, 42, '520', 114, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 998),
 
-  // Ducati Monster 937 (937cc)
-  ...yearRange(2021, 2025, 'Ducati', 'Monster 937', 15, 46, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
+  // Ducati Streetfighter V4 (1103cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2020, 2024, 'Ducati', 'Streetfighter V4', 15, 42, '525', 116, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1103),
 
-  // Ducati Monster 1200 (1198cc)
-  ...yearRange(2014, 2021, 'Ducati', 'Monster 1200', 15, 42, '525', 108, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1198),
+  // Ducati Streetfighter V4 2025+ (1103cc) — stock switched to 520, 850+ → 520ZVM-X only
+  ...yearRange(2025, 2026, 'Ducati', 'Streetfighter V4 2025', 15, 42, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
 
-  // Ducati Hypermotard 950 (937cc)
-  ...yearRange(2019, 2024, 'Ducati', 'Hypermotard 950', 15, 45, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
+  // Ducati Streetfighter V2 (955cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2022, 2024, 'Ducati', 'Streetfighter V2', 15, 43, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
 
-  // Ducati Scrambler 800 (803cc)
-  ...yearRange(2015, 2024, 'Ducati', 'Scrambler 800', 15, 46, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 803),
+  // Ducati Streetfighter V2 890 (890cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2025, 2026, 'Ducati', 'Streetfighter V2 890', 15, 42, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 890),
 
-  // Ducati Scrambler 1100 (1079cc)
-  ...yearRange(2018, 2023, 'Ducati', 'Scrambler 1100', 15, 41, '525', 106, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1079),
+  // Ducati Monster 821 (821cc) — 520, 600-849 → 520VX3 + 520ZVM-X
+  ...yearRange(2014, 2021, 'Ducati', 'Monster 821', 15, 46, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 821),
 
-  // Ducati SuperSport 950 (937cc)
-  ...yearRange(2021, 2025, 'Ducati', 'SuperSport 950', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
+  // Ducati Monster 937 (937cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2021, 2024, 'Ducati', 'Monster 937', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
 
-  // Ducati Multistrada 1260 (1262cc)
-  ...yearRange(2018, 2020, 'Ducati', 'Multistrada 1260', 15, 43, '525', 110, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1262),
+  // Ducati Monster 1200 (1198cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2014, 2021, 'Ducati', 'Monster 1200', 15, 41, '525', 108, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1198),
 
-  // Ducati Multistrada V4 (1158cc)
-  ...yearRange(2021, 2025, 'Ducati', 'Multistrada V4', 16, 42, '525', 124, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
+  // Ducati Hypermotard 950 (937cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2019, 2025, 'Ducati', 'Hypermotard 950', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
 
-  // Ducati Multistrada V2 (937cc)
-  ...yearRange(2022, 2025, 'Ducati', 'Multistrada V2', 15, 43, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
+  // Ducati Hypermotard 1100 (1100cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2007, 2009, 'Ducati', 'Hypermotard 1100', 15, 42, '525', 104, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1100),
+  ...yearRange(2010, 2012, 'Ducati', 'Hypermotard 1100', 15, 41, '525', 104, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1100),
 
-  // Ducati DesertX (937cc)
-  ...yearRange(2022, 2025, 'Ducati', 'DesertX', 15, 46, '520', 114, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
+  // Ducati Scrambler 800 (803cc) — 520, 600-849 → 520VX3 + 520ZVM-X
+  ...yearRange(2015, 2024, 'Ducati', 'Scrambler 800', 15, 46, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 803),
 
-  // Ducati Diavel V4 (1158cc)
-  ...yearRange(2023, 2025, 'Ducati', 'Diavel V4', 17, 42, '525', 120, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
+  // Ducati Scrambler Desert Sled (803cc) — 520, 600-849 → 520VX3 + 520ZVM-X
+  ...yearRange(2017, 2024, 'Ducati', 'Scrambler Desert Sled', 15, 46, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 803),
+
+  // Ducati Scrambler 1100 (1079cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2018, 2024, 'Ducati', 'Scrambler 1100', 15, 39, '520', 104, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1079),
+
+  // Ducati SuperSport 939 (939cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2017, 2020, 'Ducati', 'SuperSport 939', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 939),
+
+  // Ducati SuperSport 950 (937cc) — 520, 850+ → 520ZVM-X only
+  ...yearRange(2021, 2024, 'Ducati', 'SuperSport 950', 15, 43, '520', 106, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 937),
+
+  // Ducati Multistrada 950 (937cc) — 525, 450-1000 → 525VX3 + 525ZVM-X2
+  ...yearRange(2017, 2021, 'Ducati', 'Multistrada 950', 15, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 937),
+
+  // Ducati Multistrada 1200 (1200cc) — 530, >1100 → 530VX3 + 530ZVM-X2
+  ...yearRange(2010, 2017, 'Ducati', 'Multistrada 1200', 15, 40, '530', 108, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1200),
+
+  // Ducati Multistrada 1260 (1262cc) — 530, >1100 → 530VX3 + 530ZVM-X2
+  ...yearRange(2018, 2020, 'Ducati', 'Multistrada 1260', 15, 40, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1262),
+
+  // Ducati Multistrada 1260 Enduro (1262cc) — 530, >1100 → 530VX3 + 530ZVM-X2
+  ...yearRange(2019, 2021, 'Ducati', 'Multistrada 1260 Enduro', 15, 43, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1262),
+
+  // Ducati Multistrada V4 (1158cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2021, 2024, 'Ducati', 'Multistrada V4', 16, 42, '525', 124, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
+
+  // Ducati Multistrada V4 Pikes Peak (1158cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2022, 2024, 'Ducati', 'Multistrada V4 Pikes Peak', 16, 42, '525', 126, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
+
+  // Ducati Multistrada V2 (937cc) — 525, 450-1000 → 525VX3 + 525ZVM-X2
+  ...yearRange(2021, 2024, 'Ducati', 'Multistrada V2', 15, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 937),
+
+  // Ducati DesertX (937cc) — 525, 450-1000 → 525VX3 + 525ZVM-X2
+  ...yearRange(2023, 2025, 'Ducati', 'DesertX', 15, 49, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 937),
+
+  // Ducati Diavel 1198 (1198cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2011, 2018, 'Ducati', 'Diavel 1198', 15, 43, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1198),
+
+  // Ducati Diavel 1260 (1262cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2019, 2022, 'Ducati', 'Diavel 1260', 15, 43, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1262),
+
+  // Ducati Diavel V4 (1158cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2023, 2024, 'Ducati', 'Diavel V4', 16, 43, '525', 126, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
+
+  // Ducati 1098/1198 SBK (1198cc) — 525, 1001+ → 525ZVM-X2 only
+  ...yearRange(2007, 2011, 'Ducati', '1098/1198 SBK', 15, 38, '525', 98, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1198),
 
   // ============================================================
   // BMW
