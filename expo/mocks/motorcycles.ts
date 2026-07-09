@@ -1263,7 +1263,7 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2018, 2024, 'Ducati', 'Panigale V4', 16, 41, '525', 114, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1103),
 
   // Ducati Panigale V4 2025+ (1103cc) — stock switched to 520, 850+ → 520ZVM-X only
-  ...yearRange(2025, 2026, 'Ducati', 'Panigale V4 2025', 16, 41, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
+  ...yearRange(2025, 2026, 'Ducati', 'Panigale V4', 16, 41, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
 
   // Ducati Panigale V4R (998cc) — 520, 850+ → 520ZVM-X only
   ...yearRange(2019, 2024, 'Ducati', 'Panigale V4R', 15, 42, '520', 114, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 998),
@@ -1272,7 +1272,7 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2020, 2024, 'Ducati', 'Streetfighter V4', 15, 42, '525', 116, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1103),
 
   // Ducati Streetfighter V4 2025+ (1103cc) — stock switched to 520, 850+ → 520ZVM-X only
-  ...yearRange(2025, 2026, 'Ducati', 'Streetfighter V4 2025', 15, 42, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
+  ...yearRange(2025, 2026, 'Ducati', 'Streetfighter V4', 15, 42, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
 
   // Ducati Streetfighter V2 (955cc) — 520, 850+ → 520ZVM-X only
   ...yearRange(2022, 2024, 'Ducati', 'Streetfighter V2', 15, 43, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
