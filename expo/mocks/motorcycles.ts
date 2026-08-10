@@ -344,52 +344,59 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Yamaha YZF-R6 (599cc)
   ...yearRange(2006, 2021, 'Yamaha', 'YZF-R6', 16, 45, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
 
-  // Yamaha YZF-R7 (689cc)
-  ...yearRange(2021, 2025, 'Yamaha', 'YZF-R7', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
+  // Yamaha YZF-R7 (689cc) — rear 42T per Sprocket Center
+  ...yearRange(2022, 2026, 'Yamaha', 'YZF-R7', 16, 42, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
 
-  // Yamaha YZF-R1 (998cc)
-  ...yearRange(2004, 2008, 'Yamaha', 'YZF-R1', 17, 45, '530', 116, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  // Yamaha YZF-R1 (998cc) — split year ranges per Sprocket Center
+  ...yearRange(2004, 2005, 'Yamaha', 'YZF-R1', 17, 45, '530', 116, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  ...yearRange(2006, 2008, 'Yamaha', 'YZF-R1', 17, 45, '530', 118, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
   ...yearRange(2009, 2014, 'Yamaha', 'YZF-R1', 17, 47, '530', 120, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
-  ...yearRange(2015, 2024, 'Yamaha', 'YZF-R1', 16, 41, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  ...yearRange(2015, 2025, 'Yamaha', 'YZF-R1', 16, 41, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Yamaha YZF-R3 (321cc)
-  ...yearRange(2015, 2025, 'Yamaha', 'YZF-R3', 14, 43, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 321),
+  // Yamaha YZF-R3 (321cc) — 112 links per Sprocket Center
+  ...yearRange(2015, 2025, 'Yamaha', 'YZF-R3', 14, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 321),
 
-  // Yamaha YZF-R125
-  ...yearRange(2008, 2025, 'Yamaha', 'YZF-R125', 14, 48, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Yamaha YZF-R125 — split year ranges (rear sprocket changed 2019+)
+  ...yearRange(2008, 2018, 'Yamaha', 'YZF-R125', 14, 48, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  ...yearRange(2019, 2025, 'Yamaha', 'YZF-R125', 14, 52, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Yamaha MT-10 (998cc)
-  ...yearRange(2016, 2025, 'Yamaha', 'MT-10', 16, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Yamaha MT-10 (998cc) — split year ranges per Sprocket Center
+  ...yearRange(2016, 2021, 'Yamaha', 'MT-10', 16, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  ...yearRange(2022, 2025, 'Yamaha', 'MT-10', 16, 42, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
   // Yamaha MT-09 (847cc)
   ...yearRange(2014, 2025, 'Yamaha', 'MT-09', 16, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 847),
 
   // Yamaha MT-07 (689cc)
-  ...yearRange(2015, 2025, 'Yamaha', 'MT-07', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
+  ...yearRange(2015, 2024, 'Yamaha', 'MT-07', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
 
-  // Yamaha MT-03 (321cc)
-  ...yearRange(2020, 2025, 'Yamaha', 'MT-03', 14, 43, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 321),
+  // Yamaha MT-03 (321cc) — 112 links, 2016+ per Sprocket Center
+  ...yearRange(2016, 2025, 'Yamaha', 'MT-03', 14, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 321),
 
-  // Yamaha MT-125
-  ...yearRange(2020, 2025, 'Yamaha', 'MT-125', 14, 48, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Yamaha MT-125 — 52T rear per updated platform (2019+)
+  ...yearRange(2020, 2025, 'Yamaha', 'MT-125', 14, 52, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Yamaha XSR900 (847cc)
-  ...yearRange(2016, 2025, 'Yamaha', 'XSR900', 16, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 847),
+  // Yamaha XSR900 (847cc, 2016-2021)
+  ...yearRange(2016, 2021, 'Yamaha', 'XSR900', 16, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 847),
+  // Yamaha XSR900 (890cc, 2022+) — 118 links per Sprocket Center
+  ...yearRange(2022, 2026, 'Yamaha', 'XSR900', 16, 45, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 890),
 
-  // Yamaha XSR700 (689cc)
-  ...yearRange(2018, 2024, 'Yamaha', 'XSR700', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
+  // Yamaha XSR700 (689cc) — 2016-2025 per Sprocket Center
+  ...yearRange(2016, 2025, 'Yamaha', 'XSR700', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
 
-  // Yamaha NIKEN (847cc)
-  ...yearRange(2018, 2025, 'Yamaha', 'NIKEN', 16, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 847),
+  // Yamaha NIKEN (847cc) — 47T rear per DID kit data
+  ...yearRange(2018, 2025, 'Yamaha', 'NIKEN', 16, 47, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 847),
 
-  // Yamaha Tracer 9 (889cc)
-  ...yearRange(2021, 2025, 'Yamaha', 'Tracer 9', 16, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 889),
+  // Yamaha Tracer 9 (889cc) — 118 links per Sprocket Center
+  ...yearRange(2021, 2026, 'Yamaha', 'Tracer 9', 16, 45, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 889),
 
-  // Yamaha Tracer 7 (689cc)
-  ...yearRange(2021, 2025, 'Yamaha', 'Tracer 7', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
+  // Yamaha Tracer 7 (689cc) — 45T rear, 116 links per DID kit data
+  ...yearRange(2021, 2025, 'Yamaha', 'Tracer 7', 16, 45, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
 
-  // Yamaha Tenere 700 (689cc)
-  ...yearRange(2019, 2025, 'Yamaha', 'Tenere 700', 16, 46, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
+  // Yamaha Tenere 700 (689cc) — 15T front, 122 links per Sprocket Center
+  ...yearRange(2019, 2024, 'Yamaha', 'Tenere 700', 15, 46, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
+  // Yamaha Tenere 700 (689cc) — 2025+ switches to 520 pitch
+  ...yearRange(2025, 2026, 'Yamaha', 'Tenere 700', 15, 46, '520', 122, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 689),
 
   // Yamaha FZ-09 (847cc - pre MT-09 name)
   ...yearRange(2014, 2017, 'Yamaha', 'FZ-09', 16, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 847),
@@ -397,8 +404,8 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Yamaha FZ-07 (689cc - pre MT-07 name)
   ...yearRange(2015, 2017, 'Yamaha', 'FZ-07', 16, 43, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 689),
 
-  // Yamaha FZ6R (600cc)
-  ...yearRange(2009, 2017, 'Yamaha', 'FZ6R', 16, 46, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 600),
+  // Yamaha FZ6R (600cc) — 118 links per Sprocket Center
+  ...yearRange(2009, 2017, 'Yamaha', 'FZ6R', 16, 46, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 600),
 
   // Yamaha FZ-10 (998cc - pre MT-10 name)
   ...yearRange(2016, 2017, 'Yamaha', 'FZ-10', 16, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
@@ -463,14 +470,15 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Honda XR650L
   ...yearRange(1993, 2025, 'Honda', 'XR650L', 15, 45, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
 
-  // Honda CBR600RR (599cc)
-  ...yearRange(2003, 2006, 'Honda', 'CBR600RR', 16, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
+  // Honda CBR600RR (599cc) — 03-06 rear 43T per Sprocket Center
+  ...yearRange(2003, 2006, 'Honda', 'CBR600RR', 16, 43, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
   ...yearRange(2007, 2024, 'Honda', 'CBR600RR', 16, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
 
-  // Honda CBR1000RR (998cc)
-  ...yearRange(2004, 2007, 'Honda', 'CBR1000RR', 16, 42, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  // Honda CBR1000RR (998cc) — split year ranges per Sprocket Center
+  ...yearRange(2004, 2005, 'Honda', 'CBR1000RR', 16, 41, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  ...yearRange(2006, 2007, 'Honda', 'CBR1000RR', 16, 42, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
   ...yearRange(2008, 2016, 'Honda', 'CBR1000RR', 16, 42, '530', 116, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
-  ...yearRange(2017, 2019, 'Honda', 'CBR1000RR', 16, 42, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  ...yearRange(2017, 2025, 'Honda', 'CBR1000RR', 16, 43, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
   // Honda CBR1000RR-R (999cc)
   ...yearRange(2020, 2025, 'Honda', 'CBR1000RR-R', 16, 40, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
@@ -478,14 +486,14 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Honda CBR650R (649cc)
   ...yearRange(2019, 2025, 'Honda', 'CBR650R', 15, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
 
-  // Honda CBR650F (649cc)
-  ...yearRange(2014, 2018, 'Honda', 'CBR650F', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
+  // Honda CBR650F (649cc) — 118 links per Sprocket Center
+  ...yearRange(2014, 2018, 'Honda', 'CBR650F', 15, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
 
   // Honda CB650R (649cc)
   ...yearRange(2019, 2025, 'Honda', 'CB650R', 15, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
 
-  // Honda CB650F (649cc)
-  ...yearRange(2014, 2018, 'Honda', 'CB650F', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
+  // Honda CB650F (649cc) — 118 links per Sprocket Center
+  ...yearRange(2014, 2019, 'Honda', 'CB650F', 15, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
 
   // Honda CBR500R (471cc)
   ...yearRange(2013, 2025, 'Honda', 'CBR500R', 15, 41, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 471),
@@ -496,23 +504,24 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Honda CB500X (471cc)
   ...yearRange(2013, 2025, 'Honda', 'CB500X', 15, 41, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 471),
 
-  // Honda CBR300R (286cc)
-  ...yearRange(2015, 2025, 'Honda', 'CBR300R', 14, 36, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 286),
+  // Honda CBR300R (286cc) — 108 links per Sprocket Center
+  ...yearRange(2015, 2025, 'Honda', 'CBR300R', 14, 36, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 286),
 
-  // Honda CB300R (286cc)
-  ...yearRange(2019, 2025, 'Honda', 'CB300R', 14, 36, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 286),
+  // Honda CB300R (286cc) — 108 links per Sprocket Center
+  ...yearRange(2019, 2025, 'Honda', 'CB300R', 14, 36, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 286),
 
-  // Honda CB300F (286cc)
-  ...yearRange(2015, 2018, 'Honda', 'CB300F', 14, 36, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 286),
+  // Honda CB300F (286cc) — 108 links per Sprocket Center
+  ...yearRange(2015, 2019, 'Honda', 'CB300F', 14, 36, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 286),
 
   // Honda CB125R
   ...yearRange(2021, 2025, 'Honda', 'CB125R', 14, 40, '428', 130, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Honda CB1000R (998cc)
-  ...yearRange(2018, 2025, 'Honda', 'CB1000R', 16, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Honda CB1000R (998cc) — 15T front per Sprocket Center
+  ...yearRange(2018, 2024, 'Honda', 'CB1000R', 15, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Honda CB1100 (1140cc)
-  ...yearRange(2013, 2021, 'Honda', 'CB1100', 18, 39, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1140),
+  // Honda CB1100 (1140cc) — split year ranges per Sprocket Center
+  ...yearRange(2013, 2013, 'Honda', 'CB1100', 18, 39, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1140),
+  ...yearRange(2014, 2019, 'Honda', 'CB1100', 18, 40, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1140),
 
   // Honda Rebel 500 (471cc)
   ...yearRange(2017, 2025, 'Honda', 'Rebel 500', 15, 40, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 471),
@@ -526,38 +535,44 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Honda Africa Twin CRF1100L (1084cc)
   ...yearRange(2020, 2025, 'Honda', 'Africa Twin CRF1100L', 16, 42, '525', 124, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1084),
 
-  // Honda Africa Twin CRF1000L (998cc)
-  ...yearRange(2016, 2019, 'Honda', 'Africa Twin CRF1000L', 16, 42, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Honda Africa Twin CRF1000L (998cc) — 124 links per Sprocket Center
+  ...yearRange(2016, 2019, 'Honda', 'Africa Twin CRF1000L', 16, 42, '525', 124, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Honda NC750X (745cc)
-  ...yearRange(2014, 2025, 'Honda', 'NC750X', 17, 43, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 745),
+  // Honda NC750X (745cc) — split year ranges per Sprocket Center
+  ...yearRange(2014, 2020, 'Honda', 'NC750X', 17, 43, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 745),
+  ...yearRange(2021, 2025, 'Honda', 'NC750X', 16, 43, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 745),
 
-  // Honda NC700X (670cc)
-  ...yearRange(2012, 2013, 'Honda', 'NC700X', 17, 43, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 670),
+  // Honda NC700X (670cc) — 16T front, 114 links per Sprocket Center
+  ...yearRange(2012, 2017, 'Honda', 'NC700X', 16, 43, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 670),
 
-  // Honda Grom (MSX125)
-  ...yearRange(2014, 2025, 'Honda', 'Grom', 15, 34, '420', 106, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  // Honda Grom (MSX125) — split year ranges per Sprocket Center
+  ...yearRange(2014, 2021, 'Honda', 'Grom', 15, 34, '420', 106, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  ...yearRange(2022, 2025, 'Honda', 'Grom', 15, 38, '420', 108, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
 
-  // Honda Monkey 125
-  ...yearRange(2019, 2025, 'Honda', 'Monkey 125', 14, 31, '420', 100, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  // Honda Monkey 125 — split year ranges per Sprocket Center
+  ...yearRange(2019, 2021, 'Honda', 'Monkey 125', 15, 34, '420', 98, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  ...yearRange(2022, 2025, 'Honda', 'Monkey 125', 14, 37, '420', 98, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
 
-  // Honda Trail 125
-  ...yearRange(2021, 2025, 'Honda', 'Trail 125', 14, 39, '420', 100, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  // Honda Trail 125 — 428 pitch, 108 links per Sprocket Center
+  ...yearRange(2021, 2022, 'Honda', 'Trail 125', 14, 39, '428', 108, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  ...yearRange(2023, 2025, 'Honda', 'Trail 125', 14, 38, '428', 108, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Honda Super Cub C125
-  ...yearRange(2019, 2025, 'Honda', 'Super Cub C125', 14, 39, '420', 96, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  // Honda Super Cub C125 — 428 pitch, 106 links per Sprocket Center
+  ...yearRange(2019, 2021, 'Honda', 'Super Cub C125', 14, 36, '428', 106, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  ...yearRange(2022, 2025, 'Honda', 'Super Cub C125', 14, 35, '428', 106, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
   // Honda Navi
   ...yearRange(2022, 2025, 'Honda', 'Navi', 14, 38, '420', 90, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
 
-  // Honda VFR800 (782cc)
-  ...yearRange(2002, 2017, 'Honda', 'VFR800', 16, 43, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 782),
+  // Honda VFR800 (782cc) — split year ranges per Sprocket Center
+  ...yearRange(2002, 2014, 'Honda', 'VFR800', 16, 43, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 782),
+  ...yearRange(2014, 2021, 'Honda', 'VFR800', 16, 43, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 782),
 
-  // Honda CTX700 (670cc)
-  ...yearRange(2014, 2018, 'Honda', 'CTX700', 17, 43, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 670),
+  // Honda CTX700 (670cc) — 16T front, 112 links per Sprocket Center
+  ...yearRange(2014, 2018, 'Honda', 'CTX700', 16, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 670),
 
-  // Honda CBR250R (249cc)
-  ...yearRange(2011, 2013, 'Honda', 'CBR250R', 14, 38, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 249),
+  // Honda CBR250R (249cc) — 108 links per Sprocket Center
+  ...yearRange(2011, 2013, 'Honda', 'CBR250R', 14, 38, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 249),
 
   // Honda CRF450RWE
   ...yearRange(2019, 2025, 'Honda', 'CRF450RWE', 13, 49, '520', 114, 'DID 520ERT3', 'https://www.didchain.com/products/520ert3', 'DID 520DZ2', 'https://www.didchain.com/products/520dz2'),
@@ -645,40 +660,44 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Kawasaki KLR650
   ...yearRange(1987, 2025, 'Kawasaki', 'KLR650', 15, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
 
-  // Kawasaki ZX-10R (998cc)
-  ...yearRange(2004, 2010, 'Kawasaki', 'ZX-10R', 17, 39, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Kawasaki ZX-10R (998cc) — split year ranges per Sprocket Center
+  ...yearRange(2004, 2005, 'Kawasaki', 'ZX-10R', 17, 39, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  ...yearRange(2006, 2007, 'Kawasaki', 'ZX-10R', 17, 40, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  ...yearRange(2008, 2010, 'Kawasaki', 'ZX-10R', 17, 41, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
   ...yearRange(2011, 2015, 'Kawasaki', 'ZX-10R', 17, 39, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
   ...yearRange(2016, 2020, 'Kawasaki', 'ZX-10R', 17, 39, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
   ...yearRange(2021, 2025, 'Kawasaki', 'ZX-10R', 17, 41, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Kawasaki ZX-6R (636cc)
-  ...yearRange(2003, 2006, 'Kawasaki', 'ZX-6R', 15, 40, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 636),
-  ...yearRange(2007, 2012, 'Kawasaki', 'ZX-6R', 15, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 636),
+  // Kawasaki ZX-6R (636cc) — split year ranges per Sprocket Center
+  ...yearRange(2003, 2004, 'Kawasaki', 'ZX-6R', 15, 40, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 636),
+  ...yearRange(2005, 2006, 'Kawasaki', 'ZX-6R', 15, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 636),
+  ...yearRange(2007, 2012, 'Kawasaki', 'ZX-6R', 16, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 636),
   ...yearRange(2013, 2024, 'Kawasaki', 'ZX-6R', 15, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 636),
 
-  // Kawasaki ZX-4RR (399cc)
-  ...yearRange(2023, 2025, 'Kawasaki', 'ZX-4RR', 14, 46, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
+  // Kawasaki ZX-4RR (399cc) — 48T rear, 114 links per Sprocket Center
+  ...yearRange(2023, 2025, 'Kawasaki', 'ZX-4RR', 14, 48, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
 
-  // Kawasaki ZX-4R (399cc)
-  ...yearRange(2023, 2025, 'Kawasaki', 'ZX-4R', 14, 46, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
+  // Kawasaki ZX-4R (399cc) — same platform as ZX-4RR
+  ...yearRange(2023, 2025, 'Kawasaki', 'ZX-4R', 14, 48, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
 
   // Kawasaki ZX-25R (249cc)
   ...yearRange(2020, 2025, 'Kawasaki', 'ZX-25R', 14, 50, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 249),
 
-  // Kawasaki ZX-14R (1441cc)
-  ...yearRange(2006, 2022, 'Kawasaki', 'ZX-14R', 17, 40, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1441),
+  // Kawasaki ZX-14R (1441cc) — split year ranges per Sprocket Center
+  ...yearRange(2006, 2011, 'Kawasaki', 'ZX-14R', 17, 41, '530', 116, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1441),
+  ...yearRange(2012, 2025, 'Kawasaki', 'ZX-14R', 17, 42, '530', 118, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1441),
 
-  // Kawasaki Z H2 (998cc)
-  ...yearRange(2020, 2025, 'Kawasaki', 'Z H2', 17, 39, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Kawasaki Z H2 (998cc) — 18T front, 46T rear per OEM spec
+  ...yearRange(2020, 2025, 'Kawasaki', 'Z H2', 18, 46, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Kawasaki Ninja 400 (399cc)
-  ...yearRange(2018, 2025, 'Kawasaki', 'Ninja 400', 14, 42, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
+  // Kawasaki Ninja 400 (399cc) — 41T rear per Sprocket Center
+  ...yearRange(2018, 2025, 'Kawasaki', 'Ninja 400', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
 
-  // Kawasaki Ninja 300 (296cc)
-  ...yearRange(2013, 2017, 'Kawasaki', 'Ninja 300', 14, 42, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 296),
+  // Kawasaki Ninja 300 (296cc) — 106 links per Sprocket Center
+  ...yearRange(2013, 2017, 'Kawasaki', 'Ninja 300', 14, 42, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 296),
 
-  // Kawasaki Ninja 250R (249cc)
-  ...yearRange(2008, 2012, 'Kawasaki', 'Ninja 250R', 14, 42, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 249),
+  // Kawasaki Ninja 250R (249cc) — 45T rear per Sprocket Center
+  ...yearRange(2008, 2012, 'Kawasaki', 'Ninja 250R', 14, 45, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 249),
 
   // Kawasaki Ninja 650 (649cc)
   ...yearRange(2006, 2025, 'Kawasaki', 'Ninja 650', 15, 46, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 649),
@@ -690,26 +709,27 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Kawasaki Z900 (948cc)
   ...yearRange(2017, 2025, 'Kawasaki', 'Z900', 15, 44, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 948),
 
-  // Kawasaki Z900RS (948cc)
-  ...yearRange(2018, 2025, 'Kawasaki', 'Z900RS', 15, 44, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 948),
+  // Kawasaki Z900RS (948cc) — 42T rear, 114 links per Sprocket Center
+  ...yearRange(2018, 2025, 'Kawasaki', 'Z900RS', 15, 42, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 948),
 
-  // Kawasaki Z1000 (1043cc)
-  ...yearRange(2010, 2022, 'Kawasaki', 'Z1000', 15, 42, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1043),
+  // Kawasaki Z1000 (1043cc) — split year ranges per Sprocket Center
+  ...yearRange(2010, 2013, 'Kawasaki', 'Z1000', 15, 42, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1043),
+  ...yearRange(2014, 2020, 'Kawasaki', 'Z1000', 15, 43, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1043),
 
   // Kawasaki Z650 (649cc)
   ...yearRange(2017, 2025, 'Kawasaki', 'Z650', 15, 46, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 649),
 
-  // Kawasaki Z400 (399cc)
-  ...yearRange(2019, 2025, 'Kawasaki', 'Z400', 14, 42, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
+  // Kawasaki Z400 (399cc) — 41T rear per Sprocket Center
+  ...yearRange(2019, 2025, 'Kawasaki', 'Z400', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 399),
 
   // Kawasaki Versys 650 (649cc)
   ...yearRange(2007, 2025, 'Kawasaki', 'Versys 650', 15, 46, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 649),
 
-  // Kawasaki Versys 1000 (1043cc)
-  ...yearRange(2012, 2025, 'Kawasaki', 'Versys 1000', 16, 44, '525', 114, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1043),
+  // Kawasaki Versys 1000 (1043cc) — 15T/43T, 116 links per Sprocket Center
+  ...yearRange(2012, 2025, 'Kawasaki', 'Versys 1000', 15, 43, '525', 116, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1043),
 
-  // Kawasaki Versys-X 300 (296cc)
-  ...yearRange(2017, 2025, 'Kawasaki', 'Versys-X 300', 14, 42, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 296),
+  // Kawasaki Versys-X 300 (296cc) — 46T rear, 112 links per Sprocket Center
+  ...yearRange(2017, 2025, 'Kawasaki', 'Versys-X 300', 14, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 296),
 
   // Kawasaki Vulcan S 650 (649cc)
   ...yearRange(2015, 2025, 'Kawasaki', 'Vulcan S 650', 15, 46, '520', 120, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 649),
@@ -720,8 +740,8 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Kawasaki Z125 Pro
   ...yearRange(2017, 2025, 'Kawasaki', 'Z125 Pro', 14, 30, '420', 100, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
 
-  // Kawasaki Eliminator 500 (451cc)
-  ...yearRange(2023, 2025, 'Kawasaki', 'Eliminator 500', 15, 42, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 451),
+  // Kawasaki Eliminator 500 (451cc) — 14T/43T, 112 links per Sprocket Center
+  ...yearRange(2024, 2026, 'Kawasaki', 'Eliminator 500', 14, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 451),
 
   // ============================================================
   // SUZUKI
@@ -740,90 +760,93 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Suzuki RM65
   ...yearRange(2003, 2005, 'Suzuki', 'RM65', 14, 47, '420', 110, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
 
-  // Suzuki GSX-R600 (599cc)
-  ...yearRange(2001, 2005, 'Suzuki', 'GSX-R600', 16, 43, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
+  // Suzuki GSX-R600 (599cc) — 45T rear, 110 links per Sprocket Center
+  ...yearRange(2001, 2005, 'Suzuki', 'GSX-R600', 16, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
   ...yearRange(2006, 2022, 'Suzuki', 'GSX-R600', 16, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 599),
 
-  // Suzuki GSX-R750 (750cc)
-  ...yearRange(2000, 2005, 'Suzuki', 'GSX-R750', 17, 42, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 750),
-  ...yearRange(2006, 2010, 'Suzuki', 'GSX-R750', 17, 43, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 750),
+  // Suzuki GSX-R750 (750cc) — split year ranges per Sprocket Center
+  ...yearRange(2000, 2003, 'Suzuki', 'GSX-R750', 17, 42, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 750),
+  ...yearRange(2004, 2005, 'Suzuki', 'GSX-R750', 17, 43, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 750),
+  ...yearRange(2006, 2010, 'Suzuki', 'GSX-R750', 17, 45, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 750),
   ...yearRange(2011, 2022, 'Suzuki', 'GSX-R750', 17, 45, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 750),
 
-  // Suzuki GSX-R1000 (998cc)
-  ...yearRange(2001, 2008, 'Suzuki', 'GSX-R1000', 17, 42, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
-  ...yearRange(2009, 2016, 'Suzuki', 'GSX-R1000', 17, 43, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
-  ...yearRange(2017, 2024, 'Suzuki', 'GSX-R1000', 17, 44, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Suzuki GSX-R1000 (998cc) — split year ranges per Sprocket Center
+  ...yearRange(2001, 2006, 'Suzuki', 'GSX-R1000', 17, 42, '530', 110, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  ...yearRange(2007, 2008, 'Suzuki', 'GSX-R1000', 17, 43, '530', 112, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  ...yearRange(2009, 2016, 'Suzuki', 'GSX-R1000', 17, 42, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 998),
+  ...yearRange(2017, 2024, 'Suzuki', 'GSX-R1000', 17, 45, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Suzuki Hayabusa GSX1300R (1340cc)
-  ...yearRange(1999, 2007, 'Suzuki', 'Hayabusa GSX1300R', 18, 43, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1340),
-  ...yearRange(2008, 2020, 'Suzuki', 'Hayabusa GSX1300R', 18, 43, '530', 116, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1340),
-  ...yearRange(2021, 2025, 'Suzuki', 'Hayabusa GSX1300R', 17, 44, '530', 116, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1340),
+  // Suzuki Hayabusa GSX1300R (1340cc) — split year ranges per Sprocket Center
+  ...yearRange(1999, 2007, 'Suzuki', 'Hayabusa GSX1300R', 17, 40, '530', 112, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1340),
+  ...yearRange(2008, 2020, 'Suzuki', 'Hayabusa GSX1300R', 18, 43, '530', 114, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1340),
+  ...yearRange(2021, 2025, 'Suzuki', 'Hayabusa GSX1300R', 17, 40, '530', 112, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1340),
 
-  // Suzuki GSX-S1000 (998cc)
-  ...yearRange(2016, 2021, 'Suzuki', 'GSX-S1000', 17, 44, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
-  ...yearRange(2022, 2025, 'Suzuki', 'GSX-S1000', 17, 44, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Suzuki GSX-S1000 (998cc) — 116 links per Sprocket Center
+  ...yearRange(2016, 2021, 'Suzuki', 'GSX-S1000', 17, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  ...yearRange(2022, 2025, 'Suzuki', 'GSX-S1000', 17, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Suzuki GSX-S1000GT (998cc)
-  ...yearRange(2022, 2025, 'Suzuki', 'GSX-S1000GT', 17, 44, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Suzuki GSX-S1000GT (998cc) — 116 links per Sprocket Center
+  ...yearRange(2022, 2025, 'Suzuki', 'GSX-S1000GT', 17, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Suzuki GSX-S750 (749cc)
-  ...yearRange(2017, 2022, 'Suzuki', 'GSX-S750', 15, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 749),
+  // Suzuki GSX-S750 (749cc) — 17T front per Sprocket Center
+  ...yearRange(2017, 2022, 'Suzuki', 'GSX-S750', 17, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 749),
 
-  // Suzuki GSX-8S (776cc)
-  ...yearRange(2023, 2025, 'Suzuki', 'GSX-8S', 14, 46, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 776),
+  // Suzuki GSX-8S (776cc) — 17T/47T, 118 links per Sprocket Center
+  ...yearRange(2023, 2026, 'Suzuki', 'GSX-8S', 17, 47, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 776),
 
-  // Suzuki GSX-8R (776cc)
-  ...yearRange(2024, 2025, 'Suzuki', 'GSX-8R', 14, 46, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 776),
+  // Suzuki GSX-8R (776cc) — 17T/47T, 118 links per Sprocket Center
+  ...yearRange(2024, 2026, 'Suzuki', 'GSX-8R', 17, 47, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 776),
 
-  // Suzuki Katana (998cc)
-  ...yearRange(2020, 2025, 'Suzuki', 'Katana', 17, 44, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
+  // Suzuki Katana (998cc) — 116 links per Sprocket Center
+  ...yearRange(2020, 2025, 'Suzuki', 'Katana', 17, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 998),
 
-  // Suzuki SV650 (645cc)
-  ...yearRange(1999, 2002, 'Suzuki', 'SV650', 15, 45, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 645),
-  ...yearRange(2003, 2012, 'Suzuki', 'SV650', 15, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 645),
+  // Suzuki SV650 (645cc) — 525 pitch, 45T rear for pre-2016 per Sprocket Center
+  ...yearRange(1999, 2014, 'Suzuki', 'SV650', 15, 45, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 645),
   ...yearRange(2017, 2025, 'Suzuki', 'SV650', 15, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 645),
 
-  // Suzuki V-Strom 650 (645cc)
-  ...yearRange(2004, 2025, 'Suzuki', 'V-Strom 650', 15, 47, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 645),
+  // Suzuki V-Strom 650 (645cc) — split year ranges per Sprocket Center
+  ...yearRange(2004, 2006, 'Suzuki', 'V-Strom 650', 15, 47, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 645),
+  ...yearRange(2007, 2025, 'Suzuki', 'V-Strom 650', 15, 47, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 645),
 
-  // Suzuki V-Strom 1050 (1037cc)
-  ...yearRange(2020, 2025, 'Suzuki', 'V-Strom 1050', 17, 42, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1037),
+  // Suzuki V-Strom 1050 (1037cc) — split year ranges per Sprocket Center
+  ...yearRange(2020, 2022, 'Suzuki', 'V-Strom 1050', 17, 41, '525', 120, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1037),
+  ...yearRange(2023, 2025, 'Suzuki', 'V-Strom 1050', 17, 45, '525', 120, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1037),
 
-  // Suzuki V-Strom 800 (776cc)
-  ...yearRange(2023, 2025, 'Suzuki', 'V-Strom 800', 14, 46, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 776),
+  // Suzuki V-Strom 800 (776cc) — 17T/50T, 126 links per Sprocket Center
+  ...yearRange(2023, 2026, 'Suzuki', 'V-Strom 800', 17, 50, '525', 126, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 776),
 
-  // Suzuki V-Strom 1000 (1037cc)
-  ...yearRange(2014, 2019, 'Suzuki', 'V-Strom 1000', 17, 42, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1037),
+  // Suzuki V-Strom 1000 (1037cc) — 116 links per Sprocket Center
+  ...yearRange(2014, 2019, 'Suzuki', 'V-Strom 1000', 17, 42, '525', 116, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1037),
 
-  // Suzuki DR-Z400SM
-  ...yearRange(2005, 2024, 'Suzuki', 'DR-Z400SM', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // Suzuki DR-Z400SM — 41T rear per Sprocket Center
+  ...yearRange(2005, 2024, 'Suzuki', 'DR-Z400SM', 15, 41, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // Suzuki DR-Z400S
-  ...yearRange(2000, 2024, 'Suzuki', 'DR-Z400S', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // Suzuki DR-Z400S — 112 links per Sprocket Center
+  ...yearRange(2000, 2024, 'Suzuki', 'DR-Z400S', 15, 44, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // Suzuki DR-Z400E
-  ...yearRange(2000, 2024, 'Suzuki', 'DR-Z400E', 14, 47, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // Suzuki DR-Z400E — 114 links per Sprocket Center
+  ...yearRange(2000, 2024, 'Suzuki', 'DR-Z400E', 14, 47, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
   // Suzuki DR-Z125
   ...yearRange(2003, 2024, 'Suzuki', 'DR-Z125', 14, 57, '428', 128, 'DID 428NZ', 'https://www.didchain.com/products/428nz', 'DID 428HD', 'https://www.didchain.com/products/428hd'),
 
-  // Suzuki DR650SE
-  ...yearRange(1996, 2025, 'Suzuki', 'DR650SE', 15, 42, '525', 112, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
+  // Suzuki DR650SE — 110 links per Sprocket Center
+  ...yearRange(1996, 2025, 'Suzuki', 'DR650SE', 15, 42, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525VO', 'https://www.didchain.com/products/525vo'),
 
   // Suzuki DR200SE
   ...yearRange(1996, 2025, 'Suzuki', 'DR200SE', 14, 42, '428', 126, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Suzuki GSX250R
-  ...yearRange(2018, 2022, 'Suzuki', 'GSX250R', 14, 46, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Suzuki GSX250R — 520 pitch, 116 links per Sprocket Center
+  ...yearRange(2018, 2022, 'Suzuki', 'GSX250R', 14, 46, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // Suzuki Bandit 1250 (1255cc)
-  ...yearRange(2007, 2016, 'Suzuki', 'Bandit 1250', 17, 42, '530', 112, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1255),
+  // Suzuki Bandit 1250 (1255cc) — 18T/43T, 118 links per Sprocket Center
+  ...yearRange(2007, 2016, 'Suzuki', 'Bandit 1250', 18, 43, '530', 118, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1255),
 
-  // Suzuki GSX-S125
-  ...yearRange(2017, 2022, 'Suzuki', 'GSX-S125', 14, 44, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Suzuki GSX-S125 — 45T rear, 122 links per DID kit data
+  ...yearRange(2017, 2022, 'Suzuki', 'GSX-S125', 14, 45, '428', 122, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Suzuki GSX-R125
-  ...yearRange(2017, 2022, 'Suzuki', 'GSX-R125', 14, 44, '428', 132, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Suzuki GSX-R125 — 45T rear, 122 links per DID kit data
+  ...yearRange(2017, 2022, 'Suzuki', 'GSX-R125', 14, 45, '428', 122, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
   // Suzuki TU250X
   ...yearRange(2009, 2019, 'Suzuki', 'TU250X', 14, 40, '428', 128, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
@@ -921,65 +944,69 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // KTM 150 EXC TPI
   ...yearRange(2020, 2023, 'KTM', '150 EXC TPI', 14, 50, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
 
-  // KTM Duke 125
-  ...yearRange(2011, 2025, 'KTM', 'Duke 125', 14, 45, '428', 136, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // KTM Duke 125 — 520 pitch per Sprocket Center
+  ...yearRange(2014, 2019, 'KTM', 'Duke 125', 14, 45, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  ...yearRange(2020, 2026, 'KTM', 'Duke 125', 14, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // KTM Duke 200 (200cc)
-  ...yearRange(2012, 2025, 'KTM', 'Duke 200', 14, 42, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 200),
+  // KTM Duke 200 (200cc) — 110 links per Sprocket Center
+  ...yearRange(2014, 2025, 'KTM', 'Duke 200', 14, 42, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 200),
 
   // KTM Duke 250 (249cc)
   ...yearRange(2017, 2025, 'KTM', 'Duke 250', 14, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 249),
 
-  // KTM RC 125
-  ...yearRange(2014, 2025, 'KTM', 'RC 125', 14, 45, '428', 136, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // KTM RC 125 — 520 pitch per Sprocket Center
+  ...yearRange(2014, 2025, 'KTM', 'RC 125', 14, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // KTM RC 200 (200cc)
-  ...yearRange(2014, 2025, 'KTM', 'RC 200', 14, 42, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 200),
+  // KTM RC 200 (200cc) — 110 links per Sprocket Center
+  ...yearRange(2014, 2025, 'KTM', 'RC 200', 14, 42, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 200),
 
-  // KTM RC 390 (373cc)
-  ...yearRange(2015, 2025, 'KTM', 'RC 390', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  // KTM RC 390 (373cc) — split year ranges per Sprocket Center
+  ...yearRange(2014, 2021, 'KTM', 'RC 390', 15, 45, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  ...yearRange(2022, 2024, 'KTM', 'RC 390', 15, 44, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
 
-  // KTM Duke 390 (373cc)
-  ...yearRange(2014, 2025, 'KTM', 'Duke 390', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  // KTM Duke 390 (373cc) — split year ranges per Sprocket Center
+  ...yearRange(2013, 2023, 'KTM', 'Duke 390', 15, 45, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  ...yearRange(2024, 2026, 'KTM', 'Duke 390', 14, 43, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
 
-  // KTM 390 Adventure (373cc)
-  ...yearRange(2020, 2025, 'KTM', '390 Adventure', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  // KTM 390 Adventure (373cc) — 45T rear, 116 links per Sprocket Center
+  ...yearRange(2019, 2024, 'KTM', '390 Adventure', 15, 45, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
 
-  // KTM 690 Duke (690cc)
-  ...yearRange(2008, 2019, 'KTM', '690 Duke', 16, 40, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 690),
+  // KTM 690 Duke (690cc) — 114 links per Sprocket Center
+  ...yearRange(2008, 2019, 'KTM', '690 Duke', 16, 40, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 690),
 
-  // KTM 790 Duke (799cc)
-  ...yearRange(2018, 2023, 'KTM', '790 Duke', 16, 44, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 799),
+  // KTM 790 Duke (799cc) — 41T rear, 116 links per Sprocket Center
+  ...yearRange(2018, 2023, 'KTM', '790 Duke', 16, 41, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 799),
 
-  // KTM 890 Duke R (889cc)
-  ...yearRange(2020, 2025, 'KTM', '890 Duke R', 16, 44, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
+  // KTM 890 Duke R (889cc) — 41T rear, 116 links per Sprocket Center
+  ...yearRange(2020, 2023, 'KTM', '890 Duke R', 16, 41, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
 
-  // KTM 890 Duke (889cc)
-  ...yearRange(2021, 2025, 'KTM', '890 Duke', 16, 44, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
+  // KTM 890 Duke (889cc) — 41T rear, 116 links per Sprocket Center
+  ...yearRange(2020, 2023, 'KTM', '890 Duke', 16, 41, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
 
-  // KTM 990 Duke (947cc)
-  ...yearRange(2023, 2025, 'KTM', '990 Duke', 16, 44, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 947),
+  // KTM 990 Duke (947cc) — 43T rear, 116 links per Sprocket Center
+  ...yearRange(2024, 2026, 'KTM', '990 Duke', 16, 43, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 947),
 
-  // KTM 690 Enduro R
-  ...yearRange(2008, 2025, 'KTM', '690 Enduro R', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // KTM 690 Enduro R — split year ranges per Sprocket Center
+  ...yearRange(2008, 2017, 'KTM', '690 Enduro R', 15, 45, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  ...yearRange(2018, 2026, 'KTM', '690 Enduro R', 15, 46, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // KTM 690 SMC R
-  ...yearRange(2014, 2025, 'KTM', '690 SMC R', 16, 42, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // KTM 690 SMC R — 116 links per Sprocket Center
+  ...yearRange(2014, 2025, 'KTM', '690 SMC R', 16, 42, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // KTM 790 Adventure
-  ...yearRange(2019, 2021, 'KTM', '790 Adventure', 16, 44, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x'),
+  // KTM 790 Adventure — 45T rear per Sprocket Center
+  ...yearRange(2019, 2020, 'KTM', '790 Adventure', 16, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x'),
 
-  // KTM 890 Adventure
-  ...yearRange(2021, 2025, 'KTM', '890 Adventure', 16, 44, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 'DID 520ERV7', 'https://www.didchain.com/products/520erv7'),
+  // KTM 890 Adventure — 45T rear per Sprocket Center
+  ...yearRange(2021, 2025, 'KTM', '890 Adventure', 16, 45, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 'DID 520ERV7', 'https://www.didchain.com/products/520erv7'),
 
-  // KTM 890 Adventure R
-  ...yearRange(2021, 2025, 'KTM', '890 Adventure R', 16, 44, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 'DID 520ERV7', 'https://www.didchain.com/products/520erv7'),
+  // KTM 890 Adventure R — 45T rear per Sprocket Center
+  ...yearRange(2021, 2025, 'KTM', '890 Adventure R', 16, 45, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 'DID 520ERV7', 'https://www.didchain.com/products/520erv7'),
 
-  // KTM 1290 Super Duke R (1301cc)
-  ...yearRange(2014, 2025, 'KTM', '1290 Super Duke R', 17, 40, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1301),
+  // KTM 1290 Super Duke R (1301cc) — 38T rear, 112 links per Sprocket Center
+  ...yearRange(2014, 2024, 'KTM', '1290 Super Duke R', 17, 38, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1301),
 
-  // KTM 1390 Super Duke R (1350cc)
-  ...yearRange(2024, 2025, 'KTM', '1390 Super Duke R', 17, 40, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1350),
+  // KTM 1390 Super Duke R (1350cc) — 38T rear, same platform as 1290 SDR
+  ...yearRange(2024, 2025, 'KTM', '1390 Super Duke R', 17, 38, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1350),
 
   // KTM 1290 Super Adventure (1301cc)
   ...yearRange(2015, 2025, 'KTM', '1290 Super Adventure', 17, 42, '525', 120, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1301),
@@ -993,8 +1020,8 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // KTM 1190 Adventure (1195cc)
   ...yearRange(2013, 2016, 'KTM', '1190 Adventure', 17, 42, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 1195),
 
-  // KTM RC 8C (889cc)
-  ...yearRange(2022, 2025, 'KTM', 'RC 8C', 16, 40, '520', 112, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
+  // KTM RC 8C (889cc) — 17T/38T, 525 pitch per OEM spec
+  ...yearRange(2022, 2025, 'KTM', 'RC 8C', 17, 38, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 889),
 
   // ============================================================
   // HUSQVARNA
@@ -1057,32 +1084,32 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Husqvarna FE 501
   ...yearRange(2014, 2025, 'Husqvarna', 'FE 501', 14, 48, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
 
-  // Husqvarna 701 Supermoto (693cc)
-  ...yearRange(2016, 2025, 'Husqvarna', '701 Supermoto', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
+  // Husqvarna 701 Supermoto (693cc) — 16T/42T, 114 links per Sprocket Center
+  ...yearRange(2016, 2023, 'Husqvarna', '701 Supermoto', 16, 42, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
 
-  // Husqvarna 701 Enduro (693cc)
-  ...yearRange(2016, 2025, 'Husqvarna', '701 Enduro', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
+  // Husqvarna 701 Enduro (693cc) — 46T rear, 116 links per Sprocket Center
+  ...yearRange(2016, 2024, 'Husqvarna', '701 Enduro', 15, 46, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
 
-  // Husqvarna Norden 901 (889cc)
-  ...yearRange(2022, 2025, 'Husqvarna', 'Norden 901', 16, 44, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
+  // Husqvarna Norden 901 (889cc) — 45T rear per Sprocket Center
+  ...yearRange(2022, 2025, 'Husqvarna', 'Norden 901', 16, 45, '520', 118, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 889),
 
-  // Husqvarna Svartpilen 701 (693cc)
-  ...yearRange(2019, 2025, 'Husqvarna', 'Svartpilen 701', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
+  // Husqvarna Svartpilen 701 (693cc) — shares 701 platform: 16T/42T, 114 links
+  ...yearRange(2019, 2025, 'Husqvarna', 'Svartpilen 701', 16, 42, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
 
-  // Husqvarna Vitpilen 701 (693cc)
-  ...yearRange(2018, 2020, 'Husqvarna', 'Vitpilen 701', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
+  // Husqvarna Vitpilen 701 (693cc) — 16T/40T, 114 links per Sprocket Center
+  ...yearRange(2018, 2020, 'Husqvarna', 'Vitpilen 701', 16, 40, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 693),
 
-  // Husqvarna Vitpilen 401 (373cc)
-  ...yearRange(2018, 2020, 'Husqvarna', 'Vitpilen 401', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  // Husqvarna Vitpilen 401 (373cc) — 45T rear, 112 links per Sprocket Center
+  ...yearRange(2018, 2020, 'Husqvarna', 'Vitpilen 401', 15, 45, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
 
-  // Husqvarna Svartpilen 401 (373cc)
-  ...yearRange(2018, 2025, 'Husqvarna', 'Svartpilen 401', 15, 44, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
+  // Husqvarna Svartpilen 401 (373cc) — 45T rear, 112 links per Sprocket Center
+  ...yearRange(2018, 2025, 'Husqvarna', 'Svartpilen 401', 15, 45, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 373),
 
-  // Husqvarna Svartpilen 125
-  ...yearRange(2021, 2023, 'Husqvarna', 'Svartpilen 125', 14, 44, '428', 136, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Husqvarna Svartpilen 125 — 520 pitch per shared KTM platform
+  ...yearRange(2021, 2023, 'Husqvarna', 'Svartpilen 125', 14, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // Husqvarna Vitpilen 125
-  ...yearRange(2021, 2023, 'Husqvarna', 'Vitpilen 125', 14, 44, '428', 136, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Husqvarna Vitpilen 125 — 520 pitch per shared KTM platform
+  ...yearRange(2021, 2023, 'Husqvarna', 'Vitpilen 125', 14, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
   // ============================================================
   // GASGAS
@@ -1133,11 +1160,11 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // GasGas EC 350F
   ...yearRange(2022, 2025, 'GasGas', 'EC 350F', 14, 50, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ERVT', 'https://www.didchain.com/products/520ervt'),
 
-  // GasGas SM 700
-  ...yearRange(2022, 2025, 'GasGas', 'SM 700', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // GasGas SM 700 — shares 701 Supermoto platform: 16T/42T, 114 links
+  ...yearRange(2022, 2025, 'GasGas', 'SM 700', 16, 42, '520', 114, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
-  // GasGas ES 700
-  ...yearRange(2023, 2025, 'GasGas', 'ES 700', 15, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
+  // GasGas ES 700 — 46T rear per DID kit data
+  ...yearRange(2023, 2025, 'GasGas', 'ES 700', 15, 46, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo'),
 
   // ============================================================
   // BETA
@@ -1201,20 +1228,20 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // CFMoto 700CL-X Adventure (693cc)
   ...yearRange(2022, 2025, 'CFMoto', '700CL-X Adventure', 16, 43, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 693),
 
-  // CFMoto 450SS (449cc)
-  ...yearRange(2024, 2025, 'CFMoto', '450SS', 14, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
+  // CFMoto 450SS (449cc) — 41T rear, 106 links per Sprocket Center
+  ...yearRange(2024, 2025, 'CFMoto', '450SS', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
 
-  // CFMoto 450SR (449cc)
-  ...yearRange(2024, 2025, 'CFMoto', '450SR', 14, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
+  // CFMoto 450SR (449cc) — 41T rear, 106 links per Sprocket Center
+  ...yearRange(2024, 2025, 'CFMoto', '450SR', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
 
-  // CFMoto 450NK (449cc)
-  ...yearRange(2024, 2025, 'CFMoto', '450NK', 14, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
+  // CFMoto 450NK (449cc) — 41T rear, 106 links per Sprocket Center
+  ...yearRange(2024, 2025, 'CFMoto', '450NK', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
 
   // CFMoto 450CL-C (449cc)
   ...yearRange(2024, 2025, 'CFMoto', '450CL-C', 14, 42, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
 
-  // CFMoto 450MT (449cc)
-  ...yearRange(2024, 2025, 'CFMoto', '450MT', 14, 46, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
+  // CFMoto 450MT (449cc) — 47T rear, 116 links per Sprocket Center
+  ...yearRange(2024, 2025, 'CFMoto', '450MT', 14, 47, '520', 116, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 449),
 
   // CFMoto 650NK (649cc)
   ...yearRange(2017, 2025, 'CFMoto', '650NK', 15, 43, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
@@ -1225,8 +1252,8 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // CFMoto 650MT (649cc)
   ...yearRange(2019, 2025, 'CFMoto', '650MT', 15, 43, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 649),
 
-  // CFMoto 800MT (799cc)
-  ...yearRange(2022, 2025, 'CFMoto', '800MT', 16, 44, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 799),
+  // CFMoto 800MT (799cc) — 520 pitch, 45T rear per Sprocket Center
+  ...yearRange(2022, 2025, 'CFMoto', '800MT', 16, 45, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 799),
 
   // CFMoto 300NK (292cc)
   ...yearRange(2018, 2025, 'CFMoto', '300NK', 14, 42, '520', 108, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 292),
@@ -1275,7 +1302,7 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2025, 2026, 'Ducati', 'Streetfighter V4', 15, 42, '520', 116, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 1103),
 
   // Ducati Streetfighter V2 (955cc) — 520, 850+ → 520ZVM-X only
-  ...yearRange(2022, 2024, 'Ducati', 'Streetfighter V2', 15, 43, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
+  ...yearRange(2022, 2024, 'Ducati', 'Streetfighter V2', 15, 45, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 955),
 
   // Ducati Streetfighter V2 890 (890cc) — 520, 850+ → 520ZVM-X only
   ...yearRange(2025, 2026, 'Ducati', 'Streetfighter V2 890', 15, 42, '520', 110, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 890),
@@ -1327,7 +1354,7 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2021, 2024, 'Ducati', 'Multistrada V4', 16, 42, '525', 124, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
 
   // Ducati Multistrada V4 Pikes Peak (1158cc) — 525, 1001+ → 525ZVM-X2 only
-  ...yearRange(2022, 2024, 'Ducati', 'Multistrada V4 Pikes Peak', 16, 42, '525', 126, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
+  ...yearRange(2022, 2025, 'Ducati', 'Multistrada V4 Pikes Peak', 16, 42, '525', 126, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1158),
 
   // Ducati Multistrada V2 (937cc) — 525, 450-1000 → 525VX3 + 525ZVM-X2
   ...yearRange(2021, 2024, 'Ducati', 'Multistrada V2', 15, 43, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 937),
@@ -1356,20 +1383,20 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2019, 2022, 'BMW', 'S1000RR', 17, 45, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
   ...yearRange(2023, 2025, 'BMW', 'S1000RR', 17, 46, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
 
-  // BMW M1000RR (999cc)
-  ...yearRange(2021, 2025, 'BMW', 'M1000RR', 17, 45, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
+  // BMW M1000RR (999cc) — 46T rear, 122 links per Sprocket Center
+  ...yearRange(2021, 2024, 'BMW', 'M1000RR', 17, 46, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
 
-  // BMW S1000R (999cc)
-  ...yearRange(2014, 2025, 'BMW', 'S1000R', 17, 45, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
+  // BMW S1000R (999cc) — 120 links per Sprocket Center
+  ...yearRange(2014, 2024, 'BMW', 'S1000R', 17, 45, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
 
-  // BMW S1000XR (999cc)
-  ...yearRange(2015, 2025, 'BMW', 'S1000XR', 17, 45, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
+  // BMW S1000XR (999cc) — 128 links per Sprocket Center
+  ...yearRange(2020, 2025, 'BMW', 'S1000XR', 17, 45, '525', 128, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
 
-  // BMW F900R (895cc)
-  ...yearRange(2020, 2025, 'BMW', 'F900R', 17, 46, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 895),
+  // BMW F900R (895cc) — 44T rear, 122 links per Sprocket Center
+  ...yearRange(2020, 2025, 'BMW', 'F900R', 17, 44, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 895),
 
-  // BMW F900XR (895cc)
-  ...yearRange(2020, 2025, 'BMW', 'F900XR', 17, 46, '525', 120, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 895),
+  // BMW F900XR (895cc) — 44T rear, 122 links per Sprocket Center
+  ...yearRange(2020, 2025, 'BMW', 'F900XR', 17, 44, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 895),
 
   // BMW F850GS (853cc)
   ...yearRange(2018, 2025, 'BMW', 'F850GS', 17, 44, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 853),
@@ -1387,20 +1414,24 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // APRILIA
   // ============================================================
 
-  // Aprilia RSV4 (999cc)
-  ...yearRange(2009, 2025, 'Aprilia', 'RSV4', 16, 42, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
+  // Aprilia RSV4 — split year ranges per Sprocket Center
+  ...yearRange(2009, 2011, 'Aprilia', 'RSV4', 16, 40, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
+  ...yearRange(2011, 2015, 'Aprilia', 'RSV4', 16, 42, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 999),
+  ...yearRange(2015, 2024, 'Aprilia', 'RSV4', 16, 41, '525', 110, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 1099),
 
-  // Aprilia Tuono V4 (1077cc)
-  ...yearRange(2011, 2025, 'Aprilia', 'Tuono V4', 16, 42, '525', 110, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1077),
+  // Aprilia Tuono V4 — split year ranges per Sprocket Center
+  ...yearRange(2011, 2015, 'Aprilia', 'Tuono V4', 16, 42, '525', 110, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1077),
+  ...yearRange(2015, 2020, 'Aprilia', 'Tuono V4', 15, 42, '525', 110, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1077),
+  ...yearRange(2021, 2024, 'Aprilia', 'Tuono V4', 15, 40, '525', 110, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1077),
 
-  // Aprilia RS 660 (659cc)
-  ...yearRange(2021, 2025, 'Aprilia', 'RS 660', 15, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 659),
+  // Aprilia RS 660 (659cc) — 17T front per Sprocket Center
+  ...yearRange(2021, 2025, 'Aprilia', 'RS 660', 17, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 659),
 
-  // Aprilia Tuono 660 (659cc)
-  ...yearRange(2021, 2025, 'Aprilia', 'Tuono 660', 15, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 659),
+  // Aprilia Tuono 660 (659cc) — 17T front per Sprocket Center
+  ...yearRange(2021, 2025, 'Aprilia', 'Tuono 660', 17, 43, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 659),
 
-  // Aprilia Tuareg 660 (659cc)
-  ...yearRange(2022, 2025, 'Aprilia', 'Tuareg 660', 15, 44, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 659),
+  // Aprilia Tuareg 660 (659cc) — 42T rear, 120 links per Sprocket Center
+  ...yearRange(2022, 2025, 'Aprilia', 'Tuareg 660', 15, 42, '520', 120, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 659),
 
   // Aprilia Shiver 900 (896cc)
   ...yearRange(2017, 2022, 'Aprilia', 'Shiver 900', 16, 44, '525', 108, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 896),
@@ -1415,26 +1446,27 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // TRIUMPH
   // ============================================================
 
-  // Triumph Street Triple 765 (765cc)
-  ...yearRange(2017, 2025, 'Triumph', 'Street Triple 765', 16, 47, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 765),
+  // Triumph Street Triple 765 (765cc) — split year ranges per Sprocket Center
+  ...yearRange(2017, 2022, 'Triumph', 'Street Triple 765', 16, 46, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 765),
+  ...yearRange(2023, 2025, 'Triumph', 'Street Triple 765', 15, 48, '525', 118, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 765),
 
-  // Triumph Daytona 765 (765cc)
-  ...yearRange(2020, 2025, 'Triumph', 'Daytona 765', 16, 47, '525', 116, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 765),
+  // Triumph Daytona 765 (765cc) — 15T front, 114 links per Sprocket Center
+  ...yearRange(2020, 2022, 'Triumph', 'Daytona 765', 15, 47, '525', 114, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 765),
 
-  // Triumph Speed Triple 1200 (1160cc)
-  ...yearRange(2021, 2025, 'Triumph', 'Speed Triple 1200', 16, 44, '525', 112, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1160),
+  // Triumph Speed Triple 1200 (1160cc) — 17T front, 118 links per Sprocket Center
+  ...yearRange(2021, 2025, 'Triumph', 'Speed Triple 1200', 17, 44, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1160),
 
   // Triumph Speed Triple 1050 (1050cc)
   ...yearRange(2011, 2020, 'Triumph', 'Speed Triple 1050', 18, 42, '530', 106, 'DID 530VX3', 'https://www.didchain.com/products/530vx3', 'DID 530ZVM-X2', 'https://www.didchain.com/products/530zvm-x2', 1050),
 
-  // Triumph Trident 660 (660cc)
-  ...yearRange(2021, 2025, 'Triumph', 'Trident 660', 15, 47, '520', 112, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 660),
+  // Triumph Trident 660 (660cc) — 16T/51T, 120 links per Sprocket Center
+  ...yearRange(2021, 2025, 'Triumph', 'Trident 660', 16, 51, '520', 120, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', 660),
 
-  // Triumph Speed 400 (398cc)
-  ...yearRange(2023, 2025, 'Triumph', 'Speed 400', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 398),
+  // Triumph Speed 400 (398cc) — 15T/43T, 104 links per Sprocket Center
+  ...yearRange(2024, 2025, 'Triumph', 'Speed 400', 15, 43, '520', 104, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 398),
 
-  // Triumph Scrambler 400 X (398cc)
-  ...yearRange(2024, 2025, 'Triumph', 'Scrambler 400 X', 14, 41, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 398),
+  // Triumph Scrambler 400 X (398cc) — 43T rear per Sprocket Center
+  ...yearRange(2024, 2025, 'Triumph', 'Scrambler 400 X', 14, 43, '520', 106, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 398),
 
   // Triumph Tiger 900 (888cc)
   ...yearRange(2020, 2025, 'Triumph', 'Tiger 900', 16, 50, '525', 122, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 888),
@@ -1457,18 +1489,18 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // Triumph Street Scrambler (900cc)
   ...yearRange(2017, 2025, 'Triumph', 'Street Scrambler', 17, 41, '520', 102, 'DID 520ZVM-X', 'https://www.didchain.com/products/520zvm-x', undefined, undefined, 900),
 
-  // Triumph Thruxton 1200 (1200cc)
-  ...yearRange(2016, 2021, 'Triumph', 'Thruxton 1200', 18, 42, '525', 100, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1200),
+  // Triumph Thruxton 1200 (1200cc) — 16T front per Sprocket Center
+  ...yearRange(2016, 2024, 'Triumph', 'Thruxton 1200', 16, 42, '525', 100, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1200),
 
-  // Triumph Scrambler 1200 (1200cc)
-  ...yearRange(2019, 2025, 'Triumph', 'Scrambler 1200', 16, 46, '525', 114, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1200),
+  // Triumph Scrambler 1200 (1200cc) — 44T rear, 110 links per Sprocket Center
+  ...yearRange(2019, 2025, 'Triumph', 'Scrambler 1200', 16, 44, '525', 110, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1200),
 
   // ============================================================
   // INDIAN
   // ============================================================
 
-  // Indian FTR 1200 (1203cc)
-  ...yearRange(2019, 2021, 'Indian', 'FTR 1200', 17, 49, '525', 118, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1203),
+  // Indian FTR 1200 (1203cc) — 116 links per Sprocket Center
+  ...yearRange(2019, 2021, 'Indian', 'FTR 1200', 17, 49, '525', 116, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1203),
 
   // Indian FTR S (1203cc)
   ...yearRange(2022, 2025, 'Indian', 'FTR S', 17, 45, '525', 114, 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', undefined, undefined, 1203),
@@ -1499,14 +1531,14 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   // ROYAL ENFIELD
   // ============================================================
 
-  // Royal Enfield Continental GT 650 (648cc)
-  ...yearRange(2018, 2025, 'Royal Enfield', 'Continental GT 650', 15, 38, '525', 106, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 648),
+  // Royal Enfield Continental GT 650 (648cc) — 100 links per Sprocket Center
+  ...yearRange(2019, 2024, 'Royal Enfield', 'Continental GT 650', 15, 38, '525', 100, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 648),
 
-  // Royal Enfield Interceptor 650 (648cc)
-  ...yearRange(2018, 2025, 'Royal Enfield', 'Interceptor 650', 15, 38, '525', 106, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 648),
+  // Royal Enfield Interceptor 650 (648cc) — 100 links per Sprocket Center
+  ...yearRange(2019, 2024, 'Royal Enfield', 'Interceptor 650', 15, 38, '525', 100, 'DID 525VX3', 'https://www.didchain.com/products/525vx3', 'DID 525ZVM-X2', 'https://www.didchain.com/products/525zvm-x2', 648),
 
-  // Royal Enfield Himalayan 450 (452cc)
-  ...yearRange(2024, 2025, 'Royal Enfield', 'Himalayan 450', 15, 48, '520', 118, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 452),
+  // Royal Enfield Himalayan 450 (452cc) — 47T rear, 110 links per Sprocket Center
+  ...yearRange(2024, 2025, 'Royal Enfield', 'Himalayan 450', 15, 47, '520', 110, 'DID 520VX3', 'https://www.didchain.com/products/520vx3', 'DID 520VO', 'https://www.didchain.com/products/520vo', 452),
 ];
 
 export const chainPitchMap: Record<string, number> = {
