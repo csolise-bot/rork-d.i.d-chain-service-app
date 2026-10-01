@@ -4,6 +4,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { Analytics } from "@vercel/analytics/react";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -29,6 +30,7 @@ export default function RootLayout() {
       <GestureHandlerRootView>
         <StatusBar style="light" />
         <RootLayoutNav />
+        <Analytics />
       </GestureHandlerRootView>
     </QueryClientProvider>
   );
