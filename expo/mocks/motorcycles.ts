@@ -557,9 +557,9 @@ export const motorcycleDatabase: MotorcycleSpec[] = [
   ...yearRange(2021, 2022, 'Honda', 'Trail 125', 14, 39, '428', 108, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
   ...yearRange(2023, 2025, 'Honda', 'Trail 125', 14, 38, '428', 108, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
 
-  // Honda Super Cub C125 — 428 pitch, 106 links per Sprocket Center
-  ...yearRange(2019, 2021, 'Honda', 'Super Cub C125', 14, 36, '428', 106, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
-  ...yearRange(2022, 2025, 'Honda', 'Super Cub C125', 14, 35, '428', 106, 'DID 428VX', 'https://www.didchain.com/products/428vx', 'DID 428NZ', 'https://www.didchain.com/products/428nz'),
+  // Honda Super Cub C125 — 420 pitch, 106 links; 36T rear (2018-2021), 35T rear (2022-2025) per Sprocket Center / JT Sprockets
+  ...yearRange(2018, 2021, 'Honda', 'Super Cub C125', 14, 36, '420', 106, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
+  ...yearRange(2022, 2025, 'Honda', 'Super Cub C125', 14, 35, '420', 106, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
 
   // Honda Navi
   ...yearRange(2022, 2025, 'Honda', 'Navi', 14, 38, '420', 90, 'DID 420NZ3', 'https://www.didchain.com/products/420nz3'),
